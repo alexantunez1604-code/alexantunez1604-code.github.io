@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-inline/
+*.log
+.DS_Store
+Thumbs.db
+_trabajo/
+__pycache__/

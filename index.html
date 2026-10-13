@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Alexander Antúnez · Arquitecto y coordinador BIM</title>
+<meta name="description" content="Arquitecto y coordinador BIM en Lima. Proyecto, modelado en Revit y coordinación de obra, del trazo a lo construido.">
+<meta name="theme-color" content="#14181C">
+<meta name="author" content="Alexander Abel Antúnez Meza">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Alexander Antúnez">
+<meta property="og:title" content="Alexander Antúnez · Arquitecto y coordinador BIM">
+<meta property="og:description" content="Arquitecto y coordinador BIM en Lima. Modelado en Revit, coordinación de obra, presupuestos y adicionales, concursos y docencia, con datos y pruebas.">
+<meta property="og:url" content="https://alexantunez1604-code.github.io/">
+<meta property="og:image" content="https://alexantunez1604-code.github.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alexander Antúnez, arquitecto y coordinador BIM. Lima, Perú. Del trazo a lo construido.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alexander Antúnez · Arquitecto y coordinador BIM">
+<meta name="twitter:description" content="Arquitecto y coordinador BIM en Lima. Modelado en Revit, coordinación de obra, presupuestos y adicionales, concursos y docencia, con datos y pruebas.">
+<meta name="twitter:image" content="https://alexantunez1604-code.github.io/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Alexander Abel Antúnez Meza","jobTitle":"Arquitecto y coordinador BIM","description":"Arquitecto y coordinador BIM en Lima. Modelado en Revit, coordinación de obra, presupuestos y adicionales, concursos y docencia, con datos y pruebas.","address":{"@type":"PostalAddress","addressLocality":"Lima","addressCountry":"PE"}}</script>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#inicio">Alexander Antúnez</a>
+    <nav aria-label="Secciones">
+      <a href="#presentacion">Presentación</a><a href="#bim" data-w="bim">BIM</a><a href="#obra" data-w="obra">Obra</a><a href="#presupuestos" data-w="presupuestos">Presupuestos</a><a href="#diseno" data-w="diseno">Diseño</a><a href="#concursos" data-w="concursos">Concursos</a><a href="#docencia" data-w="docencia">Docencia</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="mn tech" id="mnBtn" type="button" aria-expanded="false" aria-controls="mnu">Mi trabajo</button>
+    <div class="mnu" id="mnu" hidden><a href="#presentacion">Presentación</a><a href="#bim" data-w="bim">BIM</a><a href="#obra" data-w="obra">Obra</a><a href="#presupuestos" data-w="presupuestos">Presupuestos</a><a href="#diseno" data-w="diseno">Diseño</a><a href="#concursos" data-w="concursos">Concursos</a><a href="#docencia" data-w="docencia">Docencia</a></div>
+  </div>
+</header>
+
+<main>
+<div class="progress" aria-hidden="true"><i></i></div>
+<section class="hero hx" id="inicio">
+  <figure class="hx-stage" id="h3stage">
+    <div class="hx-view" id="h3view">
+      <img class="hx-poster" id="h3poster" src="img/hero-3d.webp" alt="Módulo de 3 habitaciones del Pumarrinri Amazon Lodge: edificación de madera sobre terreno en pendiente, con cubierta a dos aguas y un camino de acceso.">
+      <canvas id="h3cv" aria-label="Modelo 3D del módulo de 3 habitaciones. Se puede girar arrastrando; la barra vertical lo abre en cuatro niveles." role="img"></canvas>
+      <div class="hx-tip tech" id="h3tip" hidden><b></b><span></span></div>
+    </div>
+  </figure>
+  <div class="hx-ov">
+    <header class="hx-id">
+      <p class="eyebrow tech" data-hero>Arquitecto y coordinador BIM · Lima, Perú</p>
+      <h1 data-hero><span class="nm1">Alexander</span><span class="nm2">Antúnez</span></h1>
+    </header>
+    <a class="hx-write tech" href="#contacto" data-hero>Escríbeme</a>
+    <p class="hx-cap tech" data-hero><span class="c1">Módulo de 3 habitaciones · Pumarrinri Amazon Lodge</span><span class="c2">Proyecto: Bienestudio Arquitectura · Modelado y coordinación BIM: Alexander Antúnez</span></p>
+    <div class="hx-bar" id="xbar">
+      <p class="hx-hint tech" aria-hidden="true">Explotar</p>
+      <ol class="hx-lv" id="xlv" aria-label="Niveles del modelo"></ol>
+      <div class="hx-rail" id="xrail" role="slider" tabindex="0" aria-orientation="vertical" aria-label="Explotar el modelo en niveles" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span class="hx-line"></span><span class="hx-fill" id="xfill"></span><span class="hx-knob" id="xknob"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="wrap"></div>
+<div id="presentacion">
+<section class="s wrap" id="metodo">
+  <div class="cota"><span class="tech">Método</span></div>
+  <div class="etp" id="etp">
+    <div class="pl">
+      <aside class="pl-cj" aria-label="El encargo">
+        <div class="cj-r cj-top">
+          <span class="tech eb">Un proyecto, cinco etapas</span>
+          <h2>Estructura metálica del teatro La Huaraca</h2>
+          <p class="where tech">Escuela Teatro Puckllay · Lomas de Carabayllo, Lima Norte</p>
+        </div>
+        <div class="cj-r cj-fig" role="group" aria-label="Cifras de la obra">
+          <p class="fg"><b><span data-c="12">12</span><small>m</small></b><span class="u tech">de alto</span></p>
+          <p class="fg"><b><span data-c="3">3</span><small>t</small></b><span class="u tech">de acero</span></p>
+          <p class="fg"><b><span data-c="1.5" data-d="1">1,5</span><small>meses</small></b><span class="u tech">del encargo al montaje</span></p>
+        </div>
+        <p class="cj-r en">Cubrir todo el patio, como primera etapa para techarlo después. Estructura nueva, anclada sobre las columnas y los muros existentes.</p>
+        <p class="cj-r ro"><b class="tech">Mi rol</b>Diseño, modelado, documentación, coordinación y supervisión de la ejecución.</p>
+        <ol class="cj-r pl-ix" id="etNav" aria-label="Etapas del proyecto">
+          <li data-i="0" class="on"><button type="button" data-i="0" aria-pressed="true"><span class="n tech">01</span><span class="t">Pensar</span></button><div class="d"><p>Boceto a escala 1/100 de la estructura y sus nudos.</p></div></li>
+          <li data-i="1"><button type="button" data-i="1" aria-pressed="false"><span class="n tech">02</span><span class="t">Modelar</span></button><div class="d"><p>Modelo BIM de la estructura en su entorno, base de las láminas.</p></div></li>
+          <li data-i="2"><button type="button" data-i="2" aria-pressed="false"><span class="n tech">03</span><span class="t">Documentar</span></button><div class="d"><p>Láminas a escala 1:50: cerchas, correas y detalles DET01 a DET06.</p></div></li>
+          <li data-i="3"><button type="button" data-i="3" aria-pressed="false"><span class="n tech">04</span><span class="t">Comprobar en obra</span></button><div class="d"><p>Cada encuentro construido, contrastado con su detalle.</p></div></li>
+          <li data-i="4"><button type="button" data-i="4" aria-pressed="false"><span class="n tech">05</span><span class="t">Entrega</span></button><div class="d"><p>La estructura roja, montada sobre las columnas y los muros existentes.</p></div></li>
+        </ol>
+        <button type="button" class="cj-r pl-more tech" id="etMore" aria-expanded="false" aria-controls="etFicha"><i aria-hidden="true"></i><span>Ficha completa</span></button>
+        <div class="pl-fi" id="etFicha" role="region" aria-label="Ficha completa" aria-hidden="true">
+          <button type="button" class="pl-x tech" id="etClose" tabindex="-1">Cerrar</button>
+          <dl>
+            <div><dt class="tech">Encargo</dt><dd>La escuela necesitaba una estructura que cubriera todo su patio, primera etapa para techarlo después y ampliar la asistencia a La Huaraca. Ya existían columnas y muros perimetrales de concreto y ladrillo, sobre los que se anclaron las nuevas estructuras metálicas.</dd></div>
+            <div><dt class="tech">Escuela</dt><dd>Formación artística y humana de niñez y juventud en contextos comunitarios, en Lomas de Carabayllo, Lima Norte</dd></div>
+            <div><dt class="tech">Alcance</dt><dd>Estructura metálica de 3 toneladas de acero, ejecutada en febrero de 2023. La cubierta es un proyecto aparte, a cargo de la administración de Puckllay</dd></div>
+            <div><dt class="tech">Plazo y recursos</dt><dd>Un mes y medio del encargo al montaje. Presupuesto limitado, con apoyo financiero del Ministerio de Cultura</dd></div>
+            <div><dt class="tech">Equipo</dt><dd>Proyecto desarrollado con coordinación interdisciplinaria</dd></div>
+          </dl>
+        </div>
+      </aside>
+      <div class="pl-draw" id="etView">
+        <i class="cr tl" aria-hidden="true"></i><i class="cr tr" aria-hidden="true"></i><i class="cr bl" aria-hidden="true"></i><i class="cr br" aria-hidden="true"></i>
+        <figure class="pl-st" data-i="0" id="et0">
+          <div class="pl-im"><img src="img/puck-boceto.webp" alt="Boceto a mano, a escala 1/100, de la estructura de la cobertura y sus nudos." data-lb="img/puck-boceto.webp" data-t="Boceto, escala 1/100" data-d="Del cuaderno: la forma de la cobertura y cómo se encuentran sus piezas." data-cur="Ampliar"></div>
+          <figcaption class="tech"><b>Hoja 01 / 05</b><span>Boceto · escala 1/100</span></figcaption>
+          <p class="pl-d">Boceto a escala 1/100 de la estructura y sus nudos.</p>
+        </figure>
+        <figure class="pl-st" data-i="1" id="et1">
+          <div class="pl-im"><img src="img/puck-modelo.webp" alt="Vista isométrica del modelo BIM de la estructura metálica dentro de su entorno, con los detalles DET01 a DET06 marcados." data-lb="img/puck-modelo.webp" data-t="Modelo BIM en isométrica" data-d="La estructura en su entorno, con los seis encuentros marcados (DET01 a DET06)." data-cur="Ampliar" loading="lazy"></div>
+          <figcaption class="tech"><b>Hoja 02 / 05</b><span>Modelo BIM · isométrica</span></figcaption>
+          <p class="pl-d">Modelo BIM de la estructura en su entorno, base de las láminas.</p>
+        </figure>
+        <figure class="pl-st" data-i="2" id="et2">
+          <div class="pl-im"><img src="img/puck-lamina-a05.webp" alt="Lámina A05, cerchas transversales: correas, cercha tipo y tres detalles de encuentros, a escala 1:50." data-lb="img/puck-lamina-a05.webp" data-t="Lámina A05 · Cerchas transversales" data-d="Escala 1:50, con los detalles DET01 a DET03 de los encuentros." data-cur="Ampliar" loading="lazy"></div>
+          <figcaption class="tech"><b>Hoja 03 / 05</b><span>Lámina A05 · escala 1:50</span></figcaption>
+          <p class="pl-d">Láminas a escala 1:50: cerchas, correas y detalles DET01 a DET06.</p>
+        </figure>
+        <figure class="pl-st pl-cmp" data-i="3" id="et3">
+          <div class="pl-pairs">
+            <div class="pr">
+              <div class="pp" data-lb="img/puck-det03.webp" data-t="DET03 · Encuentro de diagonales" data-d="Detalle de la lámina A05." data-cur="Ampliar"><img src="img/puck-det03.webp" alt="Detalle DET03 del plano: encuentro de diagonales." loading="lazy"><span class="tech">Plano · DET03</span></div>
+              <div class="pp" data-lb="img/puck-obra-2.webp" data-t="El mismo encuentro, en obra" data-d="Foto del encuentro DET03 ya ejecutado." data-cur="Ampliar"><img src="img/puck-obra-2.webp" alt="Fotografía del encuentro de diagonales DET03 ya ejecutado, en acero pintado de rojo." loading="lazy"><span class="tech">Obra</span></div>
+            </div>
+            <div class="pr">
+              <div class="pp" data-lb="img/puck-det05.webp" data-t="DET05 · Encuentro de diagonales" data-d="Detalle de la lámina A06." data-cur="Ampliar"><img src="img/puck-det05.webp" alt="Detalle DET05 del plano: encuentro de diagonales." loading="lazy"><span class="tech">Plano · DET05</span></div>
+              <div class="pp" data-lb="img/puck-obra-3.webp" data-t="El mismo encuentro, en obra" data-d="Foto del encuentro DET05 ya ejecutado." data-cur="Ampliar"><img src="img/puck-obra-3.webp" alt="Fotografía del encuentro de diagonales DET05 ya ejecutado, con su plancha de unión." loading="lazy"><span class="tech">Obra</span></div>
+            </div>
+          </div>
+          <figcaption class="tech"><b>Hoja 04 / 05</b><span>Plano frente a obra</span></figcaption>
+          <p class="pl-d">Cada encuentro construido, contrastado con su detalle.</p>
+        </figure>
+        <figure class="pl-st pl-fin" data-i="4" id="et4">
+          <div class="pl-del">
+            <div class="ph" data-lb="img/puck-obra-1.webp" data-t="La estructura entregada" data-d="Solo la estructura roja corresponde a este proyecto." data-cur="Ampliar"><img src="img/puck-obra-1.webp" alt="Estructura metálica pintada de rojo vista desde abajo, montada sobre el muro de ladrillo de la escuela." loading="lazy"><span class="tech">Estructura roja</span></div>
+            <div class="nt">
+              <dl>
+                <div><dt class="tech">Estructura</dt><dd>Metálica, pintada de rojo</dd></div>
+                <div><dt class="tech">Altura</dt><dd>12 m</dd></div>
+                <div><dt class="tech">Acero</dt><dd>3 t</dd></div>
+                <div><dt class="tech">Apoyo</dt><dd>Columnas y muros existentes</dd></div>
+              </dl>
+              <p class="aviso">Solo la estructura roja corresponde a este proyecto.</p>
+            </div>
+          </div>
+          <figcaption class="tech"><b>Hoja 05 / 05</b><span>Entrega</span></figcaption>
+          <p class="pl-d">La estructura roja, montada sobre las columnas y los muros existentes.</p>
+        </figure>
+        <span class="pl-scan" aria-hidden="true"></span>
+        <span class="pl-stamp tech" aria-hidden="true">Ejecutada · febrero de 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s band2" id="quien">
+  <div class="wrap">
+  <div class="cota"><span class="tech">Perfil y recorrido</span></div>
+  <div class="sh">
+    <h2>Quién soy</h2>
+    <p>Mi forma de pensar, mi recorrido y con qué trabajo.</p>
+  </div>
+  <div class="qpl">
+    <i class="qx nw" aria-hidden="true"></i><i class="qx ne" aria-hidden="true"></i><i class="qx sw" aria-hidden="true"></i><i class="qx se" aria-hidden="true"></i>
+    <div class="qbar">
+      <div class="qtabs" role="tablist" aria-label="Presentación">
+        <button class="btn t" role="tab" type="button" data-q="perfil" aria-selected="true" aria-controls="q-perfil">Perfil</button>
+        <button class="btn t" role="tab" type="button" data-q="tray" aria-selected="false" aria-controls="q-tray">Trayectoria</button>
+        <button class="btn t" role="tab" type="button" data-q="form" aria-selected="false" aria-controls="q-form">Formación y herramientas</button>
+      </div>
+      <span class="qno tech" id="qno" aria-hidden="true">Hoja 01 / 03</span>
+    </div>
+    <div class="qp" id="q-perfil" role="tabpanel">
+      <div class="mind">
+        <div class="mi-l">
+          <p class="quote">Primero que funcione, y que sea bella en sí misma. La gracia importa más que la belleza.</p>
+          <p>Soy arquitecto y coordino proyectos BIM en Lima. Empecé en estudios de arquitectura, modelando y desarrollando planimetría; después pasé a la supervisión de calidad y a la coordinación de obra. Por eso leo un proyecto desde los dos lados: cómo se dibuja y cómo se construye.</p>
+          <p>Pienso con la mano antes que con la computadora: dibujo, corrijo y recién entonces paso a Revit. Bachiller en Arquitectura por la UNI, en proceso de titulación.</p>
+        </div>
+        <div class="prin prin-col">
+          <div><h3>Rigor</h3><p>Las decisiones se toman con datos: lo ejecutado se contrasta con el proyecto aprobado y cada diferencia se clasifica y se cuantifica.</p></div>
+          <div><h3>Trazabilidad</h3><p>Cada adicional y cada observación se sustentan con evidencia fotográfica georreferenciada y verificación cruzada contra los planos aprobados.</p></div>
+          <div><h3>Control</h3><p>Metrados, avance y valorización llevados con hojas de control propias y seguimiento semanal, para que el cliente sepa en todo momento dónde está su obra.</p></div>
+        </div>
+      </div>
+    </div>
+  <div class="qp" id="q-tray" role="tabpanel" hidden>
+    <div class="tl" id="tl">
+      <div class="tl-head"><span class="tech">Puesto</span><div class="tl-years" id="years"></div></div>
+    </div>
+    <div class="tl-d" id="tlD" aria-live="polite"></div>
+  </div>
+  <div class="qp" id="q-form" role="tabpanel" hidden>
+  <div class="fmt">
+    <div>
+      <h3 class="fh">Formación</h3>
+      <ul>
+        <li>Bachiller en Arquitectura<small>Universidad Nacional de Ingeniería, 2019 a 2024. Grado otorgado en agosto de 2024.</small></li>
+        <li>Titulación en proceso<small>Proyecto arquitectónico sensible al paisaje, Tuquillo, Huarmey.</small></li>
+        <li>Idiomas<small>Español nativo. Inglés intermedio.</small></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="fh">Certificaciones</h3>
+      <ul>
+        <li>Residencia y Supervisión de Obras (QA/QC)<small>IED Stratton, Colegio de Ingenieros del Perú. 150 horas.</small></li>
+        <li>Especialista Coordinador BIM<small>Autodesk ATC, Revit 2026. 120 horas.</small></li>
+        <li>Proyectos BIM, nivel coordinador<small>Autodesk ATC, Revit 2026.</small></li>
+        <li>Coordinación, análisis y simulación BIM<small>Autodesk ATC, Navisworks Manage 2026.</small></li>
+        <li>Entorno Común de Datos (ECD)<small>Autodesk ATC, BIM 360 Cloud.</small></li>
+        <li>Herramientas avanzadas de modelamiento<small>Autodesk ATC, Revit 2026.</small></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="fh">Herramientas</h3>
+      <ul>
+        <li>Revit<small>Avanzado</small></li>
+        <li>AutoCAD<small>Avanzado</small></li>
+        <li>SketchUp<small>Avanzado</small></li>
+        <li>Navisworks Manage y D5 Render</li>
+        <li>Photoshop, Microsoft Office y Google Drive<small>Avanzado</small></li>
+        <li>Metodologías<small>BIM, Lean Construction y Last Planner.</small></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+</div>
+
+
+<section class="s wrap" id="ventanas">
+  <div class="cota"><span class="tech">Ventanas</span></div>
+  <div class="sh">
+    <h2>Mi trabajo</h2>
+    <p>Seis frentes. Cada uno reúne lo que puedo demostrar, con sus datos y sus pruebas.</p>
+  </div>
+  <div class="vgrid" id="vgrid">
+  <a class="vcard vc-lg" href="#bim" data-w="bim" data-cur="Abrir" style="--c:var(--cob)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 01 / 06</b><span>BIM</span></span>
+    <span class="vm m-bim" aria-hidden="true">
+  <span class="stk">
+    <i class="pl p4" style="--k:3"><svg viewBox="0 0 140 100" class="" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="4" y="4" width="132" height="92" fill="rgba(200,64,47,.10)" stroke="#C8402F" stroke-width="2.2"/><circle cx="32" cy="30" r="6" fill="#C8402F"/><circle cx="104" cy="66" r="9" fill="#5A646C" opacity=".8"/><rect x="58" y="22" width="26" height="12" fill="#5A646C" opacity=".8"/></svg></i>
+    <i class="pl p3" style="--k:2"><svg viewBox="0 0 140 100" class="" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="4" y="4" width="132" height="92" fill="rgba(143,154,161,.18)" stroke="#8F9AA1" stroke-width="2.2"/><path d="M4 50H46M62 50H136M70 4V30M70 70V96" stroke="#8F9AA1" stroke-width="5" stroke-linecap="butt"/><path d="M46 50H62" stroke="#8F9AA1" stroke-width="1.5" stroke-dasharray="3 3"/></svg></i>
+    <i class="pl p2" style="--k:1"><svg viewBox="0 0 140 100" class="" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="4" y="4" width="132" height="92" fill="rgba(90,100,108,.16)" stroke="#5A646C" stroke-width="2.2"/><path d="M4 26H136M4 74H136" stroke="#5A646C" stroke-width="1" opacity=".7"/></svg></i>
+    <i class="pl p1" style="--k:0"><svg viewBox="0 0 140 100" class="" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="4" y="4" width="132" height="92" fill="rgba(20,24,28,.08)" stroke="#14181C" stroke-width="3.4"/><path d="M48 4V48H4M92 96V60H136M70 4V96" stroke="#14181C" stroke-width="3.4"/></svg></i>
+  </span>
+  <span class="lbls tech"><b style="--d:0"><i style="background:#C8402F"></i>Mobiliario</b><b style="--d:1"><i style="background:#8F9AA1"></i>Carpintería</b><b style="--d:2"><i style="background:#5A646C"></i>Losas</b><b style="--d:3"><i style="background:#14181C"></i>Muros</b></span>
+  <span class="tech vh">Pasa el cursor: el modelo se separa por capas</span>
+</span>
+    <span class="vb"><h3>Modelado y coordinación BIM</h3><span class="vp">Empiezo o coordino modelos desde cero, o me integro a los que ya están en marcha. Aquí viven los modelos 3D que puedes recorrer.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  <a class="vcard " href="#obra" data-w="obra" data-cur="Abrir" style="--c:var(--grn)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 02 / 06</b><span>Obra</span></span>
+    <span class="vm m-obra" aria-hidden="true">
+  <span class="lev"><i class="tube"></i><i class="mk m1"></i><i class="mk m2"></i><i class="bub"></i></span>
+  <span class="okk tech">Conforme</span>
+  <span class="tech vh">Mueve el cursor y centra la burbuja</span>
+</span>
+    <span class="vb"><h3>Supervisión y coordinación de obra</h3><span class="vp">Resuelvo obra y la llevo con calidad: acabados, avance, contratistas y detalles resueltos en campo.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  <a class="vcard " href="#presupuestos" data-w="presupuestos" data-cur="Abrir" style="--c:var(--mag)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 03 / 06</b><span>Presupuestos</span></span>
+    <span class="vm m-pres" aria-hidden="true">
+  <span class="fan"><i style="--i:0"><em>01</em></i><i style="--i:1"><em>02</em></i><i style="--i:2"><em>03</em></i><i style="--i:3"><em>04</em></i><i style="--i:4"><em>05</em></i><i style="--i:5"><em>06</em></i><i style="--i:6"><em>07</em></i><i style="--i:7"><em>08</em></i><i style="--i:8"><em>09</em></i><i style="--i:9"><em>10</em></i><i style="--i:10"><em>11</em></i><i style="--i:11"><em>12</em></i></span>
+  <span class="big">+68.1%</span>
+  <span class="tech lbl">ejecutado sobre el contractual</span>
+</span>
+    <span class="vb"><h3>Presupuestos y adicionales</h3><span class="vp">Gestión y coordinación de proyecto: del hallazgo en campo al adicional sustentado. Todo lo logrado en Fractal, con datos.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  <a class="vcard " href="#diseno" data-w="diseno" data-cur="Abrir" style="--c:var(--vio)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 04 / 06</b><span>Diseño</span></span>
+    <span class="vm m-dis" aria-hidden="true">
+  <img src="img/sk-persp.webp" alt="" loading="lazy">
+  <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet"><path d="M70 120 C 62 70, 150 52, 214 70 C 280 88, 276 150, 196 158 C 130 166, 78 156, 70 120" pathLength="1"/><path d="M286 40 C 318 34, 336 52, 344 78" pathLength="1"/><path d="M336 70 L344 80 L350 66" pathLength="1"/><path d="M300 164 L316 180 L352 138" pathLength="1" class="tk"/></svg>
+  <span class="tech vh">Revisado</span>
+</span>
+    <span class="vb"><h3>Diseño y asistencia de diseño</h3><span class="vp">De profesional a profesional o a estudiante: críticas, apoyo en tus modelos y otros requerimientos.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  <a class="vcard " href="#concursos" data-w="concursos" data-cur="Abrir" style="--c:var(--cob)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 05 / 06</b><span>Concursos</span></span>
+    <span class="vm m-con" aria-hidden="true">
+  <i class="drw d1"><b class="tech">Lámina 01</b><u></u><u></u></i>
+  <i class="drw d2"><b class="tech">Lámina 02</b><u></u><u></u></i>
+  <i class="drw d3"><b class="tech">Investigación</b><svg viewBox="0 0 140 100" class="" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M70 8V92" stroke="#14181C" stroke-width="1"/><rect x="70" y="14" width="0" height="8"/><rect x="23" y="14" width="47" height="9" fill="#5A646C"/><rect x="18" y="29" width="52" height="9" fill="#5A646C"/><rect x="70" y="44" width="18" height="9" fill="#C8402F"/><rect x="23" y="59" width="47" height="9" fill="#5A646C"/><rect x="70" y="74" width="9" height="9" fill="#C8402F"/></svg></i>
+  <span class="tech lbl">Planero abierto</span>
+</span>
+    <span class="vb"><h3>Concursos e investigación</h3><span class="vp">Las láminas entregadas en concursos y una investigación sobre el paisaje costero de Tuquillo.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  <a class="vcard " href="#docencia" data-w="docencia" data-cur="Abrir" style="--c:var(--grn)" aria-controls="vpanel">
+    <span class="vn tech"><b>Hoja 06 / 06</b><span>Docencia</span></span>
+    <span class="vm m-doc" aria-hidden="true">
+  <svg viewBox="0 0 400 230" preserveAspectRatio="xMidYMid meet">
+    <g fill="none" stroke="#E9EDEF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M96 40V204" pathLength="1" style="--n:0"/><path d="M200 40V204" pathLength="1" style="--n:1"/><path d="M304 40V204" pathLength="1" style="--n:2"/>
+      <path d="M60 96H340" pathLength="1" style="--n:3"/><path d="M60 170H340" pathLength="1" style="--n:4"/>
+      <path d="M96 96H200V170H96Z M200 96H304V170H200Z" stroke-width="4.2" pathLength="1" style="--n:5"/>
+      <path d="M140 170 A22 22 0 0 1 162 148" pathLength="1" style="--n:6"/>
+    </g>
+    <g class="bubs" fill="none" stroke="#E9EDEF" stroke-width="2"><circle cx="96" cy="26" r="13"/><circle cx="200" cy="26" r="13"/><circle cx="304" cy="26" r="13"/></g>
+    <g class="lt" fill="#E9EDEF" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="600" font-size="20" text-anchor="middle"><text x="96" y="33">A</text><text x="200" y="33">B</text><text x="304" y="33">C</text></g>
+  </svg>
+  <span class="tech chalk">Revit I · 21 horas</span>
+</span>
+    <span class="vb"><h3>Docencia</h3><span class="vp">Cátedra universitaria y el curso de Revit para arquitectura: lo que aprendí enseñando.</span><span class="vgo tech">Abrir ventana</span></span>
+  </a>
+  </div>
+  <div class="vpanel" id="vpanel" hidden>
+    <div class="vbar">
+      <div class="vtabs" role="tablist" aria-label="Ventanas">
+      <button type="button" role="tab" data-w="bim" aria-selected="false" aria-controls="w-bim"><b>01</b>BIM</button>
+      <button type="button" role="tab" data-w="obra" aria-selected="false" aria-controls="w-obra"><b>02</b>Obra</button>
+      <button type="button" role="tab" data-w="presupuestos" aria-selected="false" aria-controls="w-presupuestos"><b>03</b>Presupuestos</button>
+      <button type="button" role="tab" data-w="diseno" aria-selected="false" aria-controls="w-diseno"><b>04</b>Diseño</button>
+      <button type="button" role="tab" data-w="concursos" aria-selected="false" aria-controls="w-concursos"><b>05</b>Concursos</button>
+      <button type="button" role="tab" data-w="docencia" aria-selected="false" aria-controls="w-docencia"><b>06</b>Docencia</button>
+      </div>
+      <button class="btn t sm" type="button" id="vclose">Cerrar ventana</button>
+    </div>
+    <section class="vw" id="w-bim" role="tabpanel" aria-label="Modelado y coordinación BIM" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 01 de 06</span><h3>Modelado y coordinación BIM</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Rigor de modelado y coordinación entre especialidades</dd></div><div><dt class="tech">Modalidades</dt><dd>Desde cero · integrándome a un modelo en marcha</dd></div><div><dt class="tech">Herramientas</dt><dd>Revit · IFC · Autodesk Construction Cloud</dd></div><div><dt class="tech">Entrega</dt><dd>Modelos 3D, metrados y expedientes coordinados</dd></div></dl>
+    </header>
+    <p class="wl">Empiezo o coordino un modelo desde cero, o me integro a uno que ya está en marcha. Aquí viven los modelos 3D que puedes recorrer.</p>
+    <div class="wcols">
+      <div><span class="tech">Desde cero</span><h4>Armo el modelo con el detalle que necesita quien construye</h4>
+        <ul><li>Modelado en Revit de proyectos y de lo construido</li><li>Levantamiento 3D de edificaciones existentes</li><li>Metrados confiables que salen del propio modelo</li></ul></div>
+      <div><span class="tech">Integrándome a un modelo en marcha</span><h4>Coordino con los especialistas sobre lo que ya existe</h4>
+        <ul><li>Detección de incompatibilidades entre especialidades</li><li>Propuesta de soluciones constructivas con los especialistas</li><li>Formación de practicantes y reducción de retrabajos</li></ul></div>
+    </div>
+    <h4 class="sub2" id="coord-bim">Coordinación sobre el modelo</h4>
+    <div class="svc">
+      <div><span class="no">01</span><h3>Modelo central en la nube</h3><p>Modelado a LOD 350 para el modelo central en Autodesk Construction Cloud, como aporte al as-built.</p></div>
+      <div><span class="no">02</span><h3>Interferencias validadas en campo</h3><p>Interferencias eléctricas, sanitarias, de HVAC y de pintura, detectadas en el modelo y validadas en obra.</p></div>
+      <div><span class="no">03</span><h3>As-built de cuatro viviendas</h3><p>As-built en Revit de las cuatro viviendas de Bermez.</p></div>
+    </div>
+    <h4 class="sub2" id="biblioteca">Biblioteca de modelos</h4>
+    <p class="small bxnote">Diez modelos de Revit, exportados a IFC y comprimidos para la web. Las cifras salen del propio archivo IFC, y la pestaña Calidad muestra qué tan completa está la información de cada modelo. Elige uno para abrirlo en el visor.</p>
+    <!--BIM:CARDS--><section class="bxg" aria-labelledby="bxg-inf"><header class="bxg-h"><span class="tech">Grupo 1 de 3 · 5 modelos</span><h4 id="bxg-inf">Modelos de información BIM</h4><p>Cinco modelos con lo que necesita quien construye: cada elemento lleva su familia, tipo, nivel, fase de obra y cantidades, y se recorren por sistema, nivel y material.</p></header><div class="bxgrid" style="--n:5"><button type="button" class="bxc" data-slug="gocta-1b" aria-pressed="false"><span class="bxc-im"><img src="img/bx-gocta-1b.webp" alt="Vista 3D del modelo Módulo 1B (Gocta Andes Lodge), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Módulo 1B</b><small>Gocta Andes Lodge</small></span><span class="bxc-n"><i><b>2,181</b> elementos</i><i><b>130</b> tipos</i><i><b>6</b> niveles</i></span><span class="bxc-g"><span class="tech">Bienestudio 2025</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="gocta-1a" aria-pressed="false"><span class="bxc-im"><img src="img/bx-gocta-1a.webp" alt="Vista 3D del modelo Módulo 1A (Gocta Andes Lodge), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Módulo 1A</b><small>Gocta Andes Lodge</small></span><span class="bxc-n"><i><b>1,546</b> elementos</i><i><b>161</b> tipos</i><i><b>6</b> niveles</i></span><span class="bxc-g"><span class="tech">Bienestudio 2025</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="hotel-tucan" aria-pressed="false"><span class="bxc-im"><img src="img/bx-hotel-tucan.webp" alt="Vista 3D del modelo Hotel Tucán Suites (Levantamiento 3D en BIM), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Hotel Tucán Suites</b><small>Levantamiento 3D en BIM</small></span><span class="bxc-n"><i><b>2,394</b> elementos</i><i><b>76</b> tipos</i><i><b>6</b> niveles</i></span><span class="bxc-g"><span class="tech">Bienestudio 2025</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="pumarrinri-mod3a" aria-pressed="false"><span class="bxc-im"><img src="img/bx-pumarrinri-mod3a.webp" alt="Vista 3D del modelo Módulo 3A (Pumarrinri Amazon Lodge), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Módulo 3A</b><small>Pumarrinri Amazon Lodge</small></span><span class="bxc-n"><i><b>752</b> elementos</i><i><b>65</b> tipos</i><i><b>4</b> niveles</i></span><span class="bxc-g"><span class="tech">Bienestudio 2025</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="pumarrinri-banos" aria-pressed="false"><span class="bxc-im"><img src="img/bx-pumarrinri-banos.webp" alt="Vista 3D del modelo Baños de recepción (Pumarrinri Amazon Lodge), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Baños de recepción</b><small>Pumarrinri Amazon Lodge</small></span><span class="bxc-n"><i><b>709</b> elementos</i><i><b>55</b> tipos</i><i><b>3</b> niveles</i></span><span class="bxc-g"><span class="tech">Bienestudio 2025</span><span class="bxc-go tech">Abrir modelo</span></span></button></div></section><section class="bxg" aria-labelledby="bxg-mue"><header class="bxg-h"><span class="tech">Grupo 2 de 3 · 1 modelo</span><h4 id="bxg-mue">Plantilla de muestra</h4><p>Una plantilla estructural para ingeniería: el modelo base sobre el que un estudio empieza a trabajar en BIM.</p></header><div class="bxgrid" style="--n:1"><button type="button" class="bxc" data-slug="plantilla-jjcc" aria-pressed="false"><span class="bxc-im"><img src="img/bx-plantilla-jjcc.webp" alt="Vista 3D del modelo Plantilla estructural LOD 300 (Acero y concreto), coloreado por sistemas constructivos." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Plantilla estructural LOD 300</b><small>Acero y concreto</small></span><span class="bxc-n"><i><b>1,799</b> elementos</i><i><b>49</b> tipos</i><i><b>3</b> niveles</i></span><span class="bxc-g"><span class="tech">Modelo de muestra</span><span class="bxc-go tech">Abrir modelo</span></span></button></div></section><section class="bxg" aria-labelledby="bxg-dis"><header class="bxg-h"><span class="tech">Grupo 3 de 3 · 4 modelos</span><h4 id="bxg-dis">Modelos de diseño</h4><p>Modelos para decidir forma y distribución. El detalle constructivo viene después, como en los modelos de información.</p></header><div class="bxgrid" style="--n:4"><button type="button" class="bxc" data-slug="casa-violeta" aria-pressed="false"><span class="bxc-im"><img src="img/bx-casa-violeta.webp" alt="Vista 3D del modelo Casa Violeta (Casa habitación en Huarmey), coloreado por sistemas." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Casa Violeta</b><small>Casa habitación en Huarmey</small></span><span class="bxc-n"><i><b>88</b> elementos</i><i><b>38</b> tipos</i><i><b>2</b> niveles</i></span><span class="bxc-g"><span class="tech">2022</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="casa-h" aria-pressed="false"><span class="bxc-im"><img src="img/bx-casa-h.webp" alt="Vista 3D del modelo Casa H (Encargo particular), coloreado por sistemas." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Casa H</b><small>Encargo particular</small></span><span class="bxc-n"><i><b>424</b> elementos</i><i><b>63</b> tipos</i><i><b>6</b> niveles</i></span><span class="bxc-g"><span class="tech">2024</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="casa-nilo" aria-pressed="false"><span class="bxc-im"><img src="img/bx-casa-nilo.webp" alt="Vista 3D del modelo Casa Nilo (Proyecto para Bermez), coloreado por sistemas." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Casa Nilo</b><small>Proyecto para Bermez</small></span><span class="bxc-n"><i><b>804</b> elementos</i><i><b>76</b> tipos</i><i><b>6</b> niveles</i></span><span class="bxc-g"><span class="tech">2022</span><span class="bxc-go tech">Abrir modelo</span></span></button><button type="button" class="bxc" data-slug="mastil-2" aria-pressed="false"><span class="bxc-im"><img src="img/bx-mastil-2.webp" alt="Vista 3D del modelo Mástil 2 (Proyecto con Bermez y SRT), coloreado por sistemas." loading="lazy" width="640" height="420"></span><span class="bxc-t"><b>Mástil 2</b><small>Proyecto con Bermez y SRT</small></span><span class="bxc-n"><i><b>841</b> elementos</i><i><b>50</b> tipos</i><i><b>7</b> niveles</i></span><span class="bxc-g"><span class="tech">2024</span><span class="bxc-go tech">Abrir modelo</span></span></button></div></section><!--/BIM:CARDS-->
+    <div class="bxv" id="visor">
+      <div class="bxs" id="bxs">
+        <canvas id="bxc" aria-label="Visor 3D del modelo elegido: arrastra para girar, usa la rueda para acercar y toca un elemento para ver su ficha" role="img" tabindex="0"></canvas>
+        <div class="bxload" id="bxload" aria-live="polite">Cargando modelo</div>
+        <div class="bxmodes" id="bxModes" role="group" aria-label="Vista del modelo">
+          <button class="bxb" type="button" data-m="nat" aria-pressed="false">Natural</button>
+          <button class="bxb" type="button" data-m="sis" aria-pressed="true">Sistemas</button>
+          <button class="bxb" type="button" data-m="mat" aria-pressed="false">Material</button>
+          <button class="bxb" type="button" data-m="niv" aria-pressed="false">Nivel</button>
+          <button class="bxb" type="button" data-m="fase" aria-pressed="false" id="bxFase">Fase</button>
+        </div>
+        <div class="bxsel" id="bxsel" hidden>
+          <span class="tech" id="bxsK"></span><b id="bxsT"></b>
+          <span class="bxsa"><button class="bxb sm" type="button" id="bxsGo">Ver ficha</button><button class="bxb sm" type="button" id="bxsX" aria-label="Quitar selección">Quitar</button></span>
+        </div>
+        <div class="bxhud">
+          <span class="tech bxhint" id="bxHint">arrastra para girar · toca un elemento</span>
+          <span class="bxhb"><button class="bxb" type="button" id="bxR" aria-pressed="true">Rotación</button><button class="bxb" type="button" id="bxX">Reiniciar vista</button></span>
+        </div>
+      </div>
+      <div class="bxp">
+        <div class="bxph"><span class="tech" id="bxK">Modelo</span><h3 id="bxT">Elige un modelo</h3><p class="small" id="bxL"></p></div>
+        <div class="bxtabs" id="bxTabs" role="tablist" aria-label="Datos del modelo">
+          <button class="bxtab" type="button" role="tab" data-t="mod" aria-selected="true">Modelo</button>
+          <button class="bxtab" type="button" role="tab" data-t="fic" aria-selected="false">Ficha</button>
+          <button class="bxtab" type="button" role="tab" data-t="met" aria-selected="false">Metrados</button>
+          <button class="bxtab" type="button" role="tab" data-t="cal" aria-selected="false">Calidad</button>
+          <button class="bxtab" type="button" role="tab" data-t="cor" aria-selected="false">Corte</button>
+        </div>
+        <div class="bxpn" id="bxp-mod" role="tabpanel" data-t="mod">
+          <dl class="bxd" id="bxD"></dl>
+          <h4 class="bxsub">Sistemas</h4><ul class="bxli" id="bxSys"></ul>
+          <h4 class="bxsub">Niveles</h4><ul class="bxli" id="bxLvl"></ul>
+          <div id="bxMatW" hidden><h4 class="bxsub">Materiales</h4><ul class="bxli static" id="bxMat"></ul></div>
+          <div id="bxPhW" hidden><h4 class="bxsub">Fases</h4><ul class="bxli static" id="bxPh"></ul></div>
+          <h4 class="bxsub">Despiece</h4>
+          <div class="bxex">
+            <div class="bxex-k" role="group" aria-label="Criterio de despiece"><button class="bxb sm" type="button" data-k="lvl" aria-pressed="true">Por nivel</button><button class="bxb sm" type="button" data-k="sys" aria-pressed="false">Por sistema</button></div>
+            <input type="range" id="bxEx" min="0" max="100" value="0" aria-label="Separar el modelo">
+          </div>
+        </div>
+        <div class="bxpn" id="bxp-fic" role="tabpanel" data-t="fic" hidden>
+          <div id="bxFic"><p class="small bxempty">Toca un elemento del modelo y aquí aparece su ficha: familia, tipo, nivel, material, fase, cantidades y todas las propiedades que trae el IFC.</p></div>
+        </div>
+        <div class="bxpn" id="bxp-met" role="tabpanel" data-t="met" hidden>
+          <p class="small bxempty" id="bxMetN"></p>
+          <div class="bxtw"><table class="bxtb" id="bxMet"></table></div>
+        </div>
+        <div class="bxpn" id="bxp-cal" role="tabpanel" data-t="cal" hidden>
+          <p class="small bxempty" id="bxCalN"></p>
+          <div class="bxbars" id="bxCal"></div>
+          <h4 class="bxsub">Composición por sistema</h4>
+          <div class="bxbars" id="bxCmp"></div>
+        </div>
+        <div class="bxpn" id="bxp-cor" role="tabpanel" data-t="cor" hidden>
+          <div class="vsec" id="vsec" data-on="false">
+            <div class="vsec-h"><span class="tech">Caja de corte</span><span class="small" id="vsOut">Apagado</span></div>
+            <div class="ax" data-a="x"><label class="tech">Largo</label>
+              <div class="dr"><i class="trk"><b></b></i><input type="range" min="0" max="1000" value="0" data-w="lo" aria-label="Largo, límite inicial"><input type="range" min="0" max="1000" value="1000" data-w="hi" aria-label="Largo, límite final"></div><output></output></div>
+            <div class="ax" data-a="z"><label class="tech">Ancho</label>
+              <div class="dr"><i class="trk"><b></b></i><input type="range" min="0" max="1000" value="0" data-w="lo" aria-label="Ancho, límite inicial"><input type="range" min="0" max="1000" value="1000" data-w="hi" aria-label="Ancho, límite final"></div><output></output></div>
+            <div class="ax" data-a="y"><label class="tech">Altura</label>
+              <div class="dr"><i class="trk"><b></b></i><input type="range" min="0" max="1000" value="0" data-w="lo" aria-label="Altura, límite inferior"><input type="range" min="0" max="1000" value="1000" data-w="hi" aria-label="Altura, límite superior"></div><output></output></div>
+            <div class="pre">
+              <button class="bxb sm" type="button" id="vSB" aria-pressed="false">Activar corte</button>
+              <button class="bxb sm" data-p="planta" type="button">Planta</button>
+              <button class="bxb sm" data-p="long" type="button">Corte longitudinal</button>
+              <button class="bxb sm" data-p="trans" type="button">Corte transversal</button>
+              <button class="bxb sm" data-p="full" type="button">Restablecer</button>
+            </div>
+          </div>
+          <p class="small bxempty">Arrastra las flechas en el modelo, o usa las barras, para cortarlo en planta o en sección. La cara cortada se rayan para leer el espesor de cada elemento.</p>
+        </div>
+      </div>
+    </div>
+    <p class="small cred2" id="bxCred">Proyecto: Bienestudio Arquitectura · Modelado y coordinación BIM: Alexander Antúnez</p>
+  </section>
+    <section class="vw" id="w-obra" role="tabpanel" aria-label="Supervisión y coordinación de obra" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 02 de 06</span><h3>Supervisión y coordinación de obra</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Que resuelvo obra y la llevo con calidad</dd></div><div><dt class="tech">Frentes</dt><dd>Calidad de acabados · coordinación de partidas · control de avance</dd></div><div><dt class="tech">Obras</dt><dd>Alpes 2 · Las Lagunas · Tiendas 3A · Monte Alegre</dd></div><div><dt class="tech">Evidencia</dt><dd>Datos de control y fotografías de obra</dd></div></dl>
+    </header>
+    <p class="wl">Elige una obra para ver mi cargo, lo que controlé, sus cifras y lo que exigió.</p>
+    <div class="oxs" role="tablist" aria-label="Obras">
+      <button type="button" class="oxt" role="tab" id="obt-alpes" data-o="alpes" aria-selected="true" aria-controls="ob-alpes"><span class="tech">Obra 01 / 04</span><b>Alpes 2</b><small>Edificio multifamiliar de 11 pisos · 2023 a 2024</small></button>
+      <button type="button" class="oxt" role="tab" id="obt-lagunas" data-o="lagunas" aria-selected="false" tabindex="-1" aria-controls="ob-lagunas"><span class="tech">Obra 02 / 04</span><b>Las Lagunas</b><small>Cuatro viviendas en La Molina · 2024 a 2025</small></button>
+      <button type="button" class="oxt" role="tab" id="obt-tiendas" data-o="tiendas" aria-selected="false" tabindex="-1" aria-controls="ob-tiendas"><span class="tech">Obra 03 / 04</span><b>Tiendas 3A</b><small>Tienda para Grupo AJE · feb. a mar. 2026</small></button>
+      <button type="button" class="oxt" role="tab" id="obt-monte" data-o="monte" aria-selected="false" tabindex="-1" aria-controls="ob-monte"><span class="tech">Obra 04 / 04</span><b>Monte Alegre</b><small>Enchape de 23 baños, Surco · abr. a may. 2026</small></button>
+    </div>
+
+    <!-- 01 · Alpes 2 -->
+    <div class="oxp" id="ob-alpes" role="tabpanel" aria-labelledby="obt-alpes" data-o="alpes">
+      <dl class="cj oxj" style="--n:3"><div><dt class="tech">Cargo</dt><dd>Supervisor de calidad de acabados (QA/QC)</dd></div><div><dt class="tech">Empresa</dt><dd>BRAVEN E.I.R.L.</dd></div><div><dt class="tech">Lugar</dt><dd>Lima</dd></div></dl>
+      <div class="oxd">
+        <div class="nums oxn">
+          <div class="num"><strong>24</strong><span>departamentos controlados</span></div>
+          <div class="num"><strong>≈ 25</strong><span>actas de observaciones corregidas en dos semanas</span></div>
+        </div>
+        <figure class="oxv oxv-a" id="oxA">
+          <div class="oxa-g" role="img" aria-label="Cuadrícula de 24 celdas, una por cada departamento controlado"></div>
+          <figcaption class="tech" aria-live="polite">Cada celda es un departamento. Recórrelas para ver lo controlado en cada uno.</figcaption>
+        </figure>
+      </div>
+      <h4 class="sub3">Lo que se controló</h4>
+      <div class="nums oxn oxn3">
+        <div class="num"><strong>144 ml</strong><span>de mueblería de melamina</span><small>6 ml por departamento × 24</small></div>
+        <div class="num"><strong>144</strong><span>puertas</span><small>6 por departamento × 24</small></div>
+        <div class="num"><strong>360 m²</strong><span>de enchape en baños y cocinas</span><small>15 m² por departamento × 24</small></div>
+      </div>
+      <p class="oxfn">Los totales son el producto de las cantidades por departamento por los 24 departamentos.</p>
+      <div class="acf oxc">
+        <div><span class="tech">Alcance</span><ul class="oxl"><li>Mueblería de melamina, puertas y enchapes de baños y cocinas en cada departamento.</li><li>Observaciones registradas en acta y levantadas de forma continua.</li><li>El cargo incluía además ventanas, pintura y luminarias, con supervisión diaria de acabados.</li></ul></div>
+        <div><span class="tech">Lo que exigió</span><p>Un control repetitivo y sostenido: las mismas tres líneas de control en 24 departamentos, con observaciones que se levantaban de forma continua.</p></div>
+      </div>
+    </div>
+
+    <!-- 02 · Las Lagunas -->
+    <div class="oxp" id="ob-lagunas" role="tabpanel" aria-labelledby="obt-lagunas" data-o="lagunas" hidden>
+      <dl class="cj oxj" style="--n:3"><div><dt class="tech">Cargo</dt><dd>Coordinador de obra</dd></div><div><dt class="tech">Empresa</dt><dd>BERMEZ</dd></div><div><dt class="tech">Lugar</dt><dd>La Molina, Lima</dd></div></dl>
+      <div class="oxd">
+        <div class="nums oxn">
+          <div class="num"><strong>4</strong><span>viviendas de dos pisos y azotea, cada una con piscina</span></div>
+          <div class="num"><strong>1,275 m²</strong><span>de área construida, suma de las cuatro viviendas</span></div>
+        </div>
+        <figure class="oxv oxv-b" id="oxB">
+          <div class="oxb-r" role="img" aria-label="Cuatro barras horizontales proporcionales al área construida de cada vivienda: casa 1, 320 metros cuadrados; casa 2, 345; casa 3, 370; casa 4, 240, con piscina en la azotea">
+            <div class="oxb-i" style="--w:86.5%"><span class="tech">Casa 1</span><i></i><b>320 m²</b></div>
+            <div class="oxb-i" style="--w:93.2%"><span class="tech">Casa 2</span><i></i><b>345 m²</b></div>
+            <div class="oxb-i" style="--w:100%"><span class="tech">Casa 3</span><i></i><b>370 m²</b></div>
+            <div class="oxb-i oxb-p" style="--w:64.9%"><span class="tech">Casa 4</span><i></i><b>240 m²</b></div>
+          </div>
+          <figcaption class="tech">Área construida por vivienda, a escala. La casa 4 lleva la piscina en la azotea.</figcaption>
+        </figure>
+      </div>
+      <div class="acf oxc">
+        <div><span class="tech">Alcance</span><ul class="oxl"><li>Coordinación de las obras de excavación, concreto, albañilería de ladrillo y ladrillo pastelero, tarrajeo, piscinas e instalaciones sanitarias y eléctricas.</li><li>Seguimiento de partidas en campo, con metrados para valorizaciones y control de avance.</li><li>Modelado as-built en Revit de las cuatro viviendas: arquitectura, estructuras, sanitarias y eléctricas.</li></ul></div>
+        <div><span class="tech">Lo que exigió</span><p>Cuatro viviendas de áreas construidas distintas, de 240 a 370 m², cada una con piscina, y todos sus frentes de obra por coordinar. La casa 3 salvaba una luz de 7.8 m en su sala. La casa 4, la de menor área, sumaba una complejidad propia: una piscina en la azotea.</p></div>
+      </div>
+      <h4 class="sub3">Registro en obra</h4>
+      <div class="oxg">
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-1.webp" data-t="Muro de contención, casa 3" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-1.webp" alt="Muro de contención de concreto armado en una excavación, con aceros de espera, cerco verde y cerros al fondo." loading="lazy"></div><figcaption><span class="tech">Casa 3</span>Muro de contención de concreto.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-2.webp" data-t="Encofrado de techo, casa 3" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-2.webp" alt="Encofrado de techo con puntales y vigas de madera y acero de refuerzo, sobre columnas de concreto y muros de ladrillo." loading="lazy"></div><figcaption><span class="tech">Casa 3</span>Encofrado de techo.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-3.webp" data-t="Piscina de la casa 1" data-d="Las Lagunas, La Molina. Los rostros se difuminaron." data-cur="Ampliar"><img src="img/ob-lag-3.webp" alt="Encofrado de madera y acero de refuerzo con concreto fresco, junto a un vaso de piscina con agua, visto desde arriba." loading="lazy"></div><figcaption><span class="tech">Casa 1</span>Piscina, en construcción.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-4.webp" data-t="Piscina de la casa 2" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-4.webp" alt="Vaso de piscina de concreto frente a un muro de ladrillo con andamios, junto a una vivienda en obra gruesa." loading="lazy"></div><figcaption><span class="tech">Casa 2</span>Piscina, en construcción.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-5.webp" data-t="Piscina de la casa 3" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-5.webp" alt="Vaso de piscina de concreto con superficie lisa, sumideros en el fondo y una muestra de mosaico sobre el borde, visto desde arriba." loading="lazy"></div><figcaption><span class="tech">Casa 3</span>Vaso de la piscina, antes del revestimiento.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-6.webp" data-t="Piscina de la casa 4, en la azotea" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-6.webp" alt="Vaso de piscina de concreto en la azotea, con tuberías en los muros y vista a las viviendas vecinas y a los cerros." loading="lazy"></div><figcaption><span class="tech">Casa 4</span>Piscina en la azotea.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-7.webp" data-t="Losa aligerada con ladrillo pastelero" data-d="Las Lagunas, La Molina. Antes del vaciado." data-cur="Ampliar"><img src="img/ob-lag-7.webp" alt="Losa aligerada de ladrillo pastelero y acero antes del vaciado, vista desde arriba con casas vecinas al fondo." loading="lazy"></div><figcaption><span class="tech">Estructura</span>Losa aligerada con ladrillo pastelero, antes del vaciado.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-8.webp" data-t="Escalera de concreto" data-d="Las Lagunas, La Molina. Obra gruesa." data-cur="Ampliar"><img src="img/ob-lag-8.webp" alt="Escalera de concreto en obra gruesa, con muros de concreto visto y una escalera de tijera." loading="lazy"></div><figcaption><span class="tech">Obra gruesa</span>Escalera de concreto en una de las viviendas.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-lag-9.webp" data-t="Sala y cocina en acabados" data-d="Las Lagunas, La Molina." data-cur="Ampliar"><img src="img/ob-lag-9.webp" alt="Sala y cocina amplias con piso brillante, cielo raso de drywall y ventanales." loading="lazy"></div><figcaption><span class="tech">Acabados</span>Sala y cocina en etapa de acabados.</figcaption></figure>
+      </div>
+      <p class="small oxcr">Fotografías del registro de obra, publicadas con autorización. Se difuminaron los rostros de quienes aparecen.</p>
+    </div>
+
+    <!-- 03 · Tiendas 3A -->
+    <div class="oxp" id="ob-tiendas" role="tabpanel" aria-labelledby="obt-tiendas" data-o="tiendas" hidden>
+      <dl class="cj oxj" style="--n:4"><div><dt class="tech">Cargo</dt><dd>Coordinador adjunto del residente</dd></div><div><dt class="tech">Empresa</dt><dd>Proyectos DMD</dd></div><div><dt class="tech">Cliente</dt><dd>Grupo AJE</dd></div><div><dt class="tech">Lugar</dt><dd>La Victoria, Lima</dd></div></dl>
+      <div class="oxd">
+        <div class="nums oxn">
+          <div class="num"><strong>11</strong><span>días calendario de ejecución, en horarios extendidos</span></div>
+          <div class="num"><strong>20</strong><span>operarios a cargo, en seis partidas</span></div>
+        </div>
+        <figure class="oxv oxv-c" id="oxC">
+          <div class="oxc-d" role="img" aria-label="Fila de 11 celdas, una por cada día calendario de ejecución; la última marca la entrega"></div>
+          <div class="oxc-p" role="list" aria-label="Partidas bajo coordinación"><span class="tech oxc-h">Seis partidas, 20 operarios a cargo</span><b role="listitem">Drywall</b><b role="listitem">Sanitarias</b><b role="listitem">Eléctricas</b><b role="listitem">Albañilería</b><b role="listitem">Pintura</b><b role="listitem">Enchapes</b></div>
+          <figcaption class="tech">Arriba, los once días calendario hasta la entrega. Abajo, las partidas con operarios a cargo.</figcaption>
+        </figure>
+      </div>
+      <div class="acf oxc">
+        <div><span class="tech">Alcance</span><ul class="oxl"><li>Coordinación de los 20 operarios de las seis partidas.</li><li>Coordinación con la partida eléctrica.</li><li>Del levantamiento de medidas a la entrega final.</li></ul></div>
+        <div><span class="tech">Lo que exigió</span><p>Ejecutar en once días calendario, en horarios extendidos, para entregar una tienda funcional y lista para la mudanza de sus productos.</p></div>
+      </div>
+      <h4 class="sub3">Registro en obra</h4>
+      <div class="oxg oxg4">
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-1.webp" data-t="Fachada en obra" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-1.webp" alt="Obreros trabajando en la fachada de la tienda, sobre un andamio." loading="lazy"></div><figcaption><span class="tech">Fachada</span>Trabajos en la fachada, con andamio.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-2.webp" data-t="Interior en montaje" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-2.webp" alt="Interior de la tienda con columnas pintadas, góndolas y refrigeradores en montaje." loading="lazy"></div><figcaption><span class="tech">Interior</span>Interior de la tienda con el mobiliario en montaje.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-3.webp" data-t="Góndolas instaladas" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-3.webp" alt="Pasillo de la sala de ventas con góndolas blancas ya instaladas y piso terminado." loading="lazy"></div><figcaption><span class="tech">Mobiliario</span>Góndolas instaladas en la sala de ventas.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-4.webp" data-t="Góndolas, vista del pasillo" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-4.webp" alt="Pasillo entre góndolas vacías, con el ingreso de la tienda al fondo." loading="lazy"></div><figcaption><span class="tech">Mobiliario</span>Góndolas de la sala de ventas, vista hacia el ingreso.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-5.webp" data-t="Pasillo con mercadería" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-5.webp" alt="Pasillo de la tienda con la mercadería colocada y piso brillante." loading="lazy"></div><figcaption><span class="tech">Entrega</span>Pasillo con la mercadería colocada.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-6.webp" data-t="Sala de ventas" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-6.webp" alt="Sala de ventas con productos exhibidos, refrigeradora y pantalla." loading="lazy"></div><figcaption><span class="tech">Entrega</span>Sala de ventas con la mercadería colocada.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-7.webp" data-t="Fachada terminada" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-7.webp" alt="Fachada de la tienda terminada, con letrero y arco de globos en el ingreso." loading="lazy"></div><figcaption><span class="tech">Entrega</span>Fachada terminada, el día de la apertura.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ti-8.webp" data-t="Fachada de noche" data-d="Tiendas 3A, La Victoria." data-cur="Ampliar"><img src="img/ob-ti-8.webp" alt="Fachada de la tienda de noche, con el letrero iluminado." loading="lazy"></div><figcaption><span class="tech">Entrega</span>Fachada terminada, de noche.</figcaption></figure>
+      </div>
+      <p class="small oxcr">Fotografías del registro de obra, publicadas con autorización.</p>
+    </div>
+
+    <!-- 04 · Monte Alegre -->
+    <div class="oxp" id="ob-monte" role="tabpanel" aria-labelledby="obt-monte" data-o="monte" hidden>
+      <dl class="cj oxj" style="--n:3"><div><dt class="tech">Cargo</dt><dd>Asistente de Gerencia y Coordinador de Obra</dd></div><div><dt class="tech">Empresa</dt><dd>Proyectos DMD</dd></div><div><dt class="tech">Lugar</dt><dd>Surco, Lima</dd></div></dl>
+      <div class="oxd oxd-m">
+        <div class="oxl2">
+          <div class="nums oxn">
+            <div class="num"><strong>23</strong><span>baños enchapados, 46 ambientes</span></div>
+            <div class="num"><strong>9</strong><span>departamentos, en 3 niveles</span></div>
+          </div>
+          <dl class="cj oxq" style="--n:2"><div><dt class="tech">Criterio de aprobación</dt><dd>Variabilidad de verticalidad y de espesor de juntas</dd></div><div><dt class="tech">Estándar</dt><dd>Milimétrico</dd></div></dl>
+        </div>
+        <div class="num oxbig" data-p="mont" data-k="ench">
+          <strong>2,981 m²</strong>
+          <span>de enchape controlados, con valorización semanal</span>
+          <div class="viz" role="img" aria-label="Cuadrícula de 2,981 celdas, una por cada metro cuadrado de enchape controlado"></div>
+          <p class="vd" aria-live="polite"></p>
+          <div class="nf"><small>Edificio Monte Alegre, Surco</small><button class="btn sm t" type="button" data-rp>Repetir</button></div>
+        </div>
+      </div>
+      <div class="acf oxc">
+        <div><span class="tech">Alcance</span><ul class="oxl"><li>Coordinación y supervisión del enchape de 23 baños (46 ambientes) en 9 departamentos y 3 niveles.</li><li>Control de 2,981 m² con valorización semanal durante cerca de dos meses.</li></ul></div>
+        <div><span class="tech">Lo que exigió</span><p>Una coordinación exigente para la aprobación de las partidas, con estándares milimétricos de variabilidad de verticalidad y de espesor de juntas.</p></div>
+      </div>
+      <h4 class="sub3">Registro en obra</h4>
+      <div class="oxg">
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-5.webp" data-t="Crucetas en la esquina" data-d="Monte Alegre, Surco. Control del espesor de juntas." data-cur="Ampliar"><img src="img/ob-ma-5.webp" alt="Esquina de un baño con revestimiento colocado con crucetas entre las piezas." loading="lazy"></div><figcaption><span class="tech">Juntas</span>Revestimiento con crucetas en la esquina: control del espesor de juntas.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-4.webp" data-t="Encuentro en esquina" data-d="Monte Alegre, Surco." data-cur="Ampliar"><img src="img/ob-ma-4.webp" alt="Esquina interior de un baño donde las juntas de los dos muros se encuentran alineadas." loading="lazy"></div><figcaption><span class="tech">Esquinas</span>Encuentro en esquina, con juntas alineadas en ambos planos.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-3.webp" data-t="Piso de formato grande" data-d="Monte Alegre, Surco." data-cur="Ampliar"><img src="img/ob-ma-3.webp" alt="Piso de piezas de formato grande con una junta fina y continua." loading="lazy"></div><figcaption><span class="tech">Pisos</span>Piso de formato grande, con junta fina y continua.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-1.webp" data-t="Muro en espiga, arranque" data-d="Monte Alegre, Surco." data-cur="Ampliar"><img src="img/ob-ma-1.webp" alt="Muro revestido en patrón espiga, con el borde superior cortado en zigzag." loading="lazy"></div><figcaption><span class="tech">Patrones</span>Muro en espiga: arranque del patrón y corte en la parte alta.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-2.webp" data-t="Muro en espiga, detalle" data-d="Monte Alegre, Surco." data-cur="Ampliar"><img src="img/ob-ma-2.webp" alt="Detalle de piezas rectangulares colocadas en espiga, con juntas continuas." loading="lazy"></div><figcaption><span class="tech">Patrones</span>Muro en espiga, con juntas continuas.</figcaption></figure>
+        <figure class="oxf"><div class="oxz" data-lb="img/ob-ma-6.webp" data-t="Piso decorativo y zócalo" data-d="Monte Alegre, Surco." data-cur="Ampliar"><img src="img/ob-ma-6.webp" alt="Piso decorativo con zócalo del mismo diseño, junto a un mueble de baño." loading="lazy"></div><figcaption><span class="tech">Pisos</span>Piso decorativo con su zócalo, junto al mueble de baño.</figcaption></figure>
+      </div>
+      <p class="small oxcr">Fotografías del registro de obra, publicadas con autorización.</p>
+    </div>
+  </section>
+    <section class="vw" id="w-presupuestos" role="tabpanel" aria-label="Presupuestos y adicionales" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 03 de 06</span><h3>Presupuestos y adicionales</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Que sustento costos, metrados y adicionales</dd></div><div><dt class="tech">Obra</dt><dd>Nueva Cámara de Senadores</dd></div><div><dt class="tech">Empresa</dt><dd>Fractal Construcciones Generales</dd></div><div><dt class="tech">Comitente</dt><dd>Congreso de la República, Unidad Ejecutora de la Bicameralidad</dd></div><div><dt class="tech">Frentes</dt><dd>Drywall · acabados · instalaciones sanitarias</dd></div><div><dt class="tech">Entrega</dt><dd>Informes técnicos de adicionales, metrados, presupuestos</dd></div></dl>
+    </header>
+    <p class="wl">Gestión y coordinación de proyecto: del hallazgo en campo al adicional sustentado ante el comitente. Aquí está lo que logré en Fractal, con datos.</p>
+    <div class="nums">
+    <div class="num" data-p="nccs" data-k="inf">
+      <strong>12</strong>
+      <span>informes técnicos de adicionales sustentados ante el comitente</span>
+      <div class="viz" role="img" aria-label="Doce hojas apiladas, una por cada informe técnico"></div>
+      <p class="vd" aria-live="polite"></p>
+      <div class="nf"><small>Nueva Cámara de Senadores</small><button class="btn sm t" type="button" data-rp>Repetir</button></div>
+    </div>
+    <div class="num" data-p="nccs" data-k="met">
+      <strong>+68.1%</strong>
+      <span>de metrado ejecutado sobre el contractual, validado con el <span style="white-space:nowrap">as-built</span> modelado en BIM</span>
+      <div class="viz" role="img" aria-label="Dos barras: el metrado contractual y el metrado ejecutado, validado con el as-built modelado en BIM, que es 68.1 por ciento mayor"></div>
+      <p class="vd" aria-live="polite"></p>
+      <div class="nf"><small>Nueva Cámara de Senadores</small><button class="btn sm t" type="button" data-rp>Repetir</button></div>
+    </div>
+    <div class="num" data-p="nccs" data-k="dre">
+      <strong>197</strong>
+      <span>puntos de drenaje verificados en campo contra el proyecto aprobado</span>
+      <div class="viz" role="img" aria-label="Matriz de 197 puntos, uno por cada punto de drenaje verificado"></div>
+      <p class="vd" aria-live="polite"></p>
+      <div class="nf"><small>Nueva Cámara de Senadores</small><button class="btn sm t" type="button" data-rp>Repetir</button></div>
+    </div>
+    </div>
+    <h4 class="sub2">El proceso, paso a paso</h4>
+    <div class="steps" id="steps">
+      <div class="st-rail" id="stRail" role="tablist" aria-label="Pasos del proceso"></div>
+      <div class="st-d" id="stD" aria-live="polite"></div>
+      <button class="btn sm t" type="button" id="stPlay">Ver el proceso</button>
+    </div>
+        <h4 class="sub2">Registro en obra</h4>
+    <div class="oxg oxg-q">
+      <figure class="oxf"><div class="oxz" data-lb="img/pr-fr-2.webp" data-t="En obra, frente a los paños de vidrio" data-d="Nueva Cámara de Senadores, Fractal." data-cur="Ampliar"><img src="img/pr-fr-2.webp" alt="Alexander Antúnez con casco y chaleco de Fractal junto a los paños de vidrio de la fachada, con el Palacio Legislativo y una bandera del Perú al fondo." loading="lazy" style="object-position:60% 40%"></div><figcaption><span class="tech">En obra</span>Frente a los paños de vidrio de la fachada.</figcaption></figure>
+      <figure class="oxf"><div class="oxz" data-lb="img/pr-fr-3.webp" data-t="Caja de escalera con barandas de vidrio" data-d="Nueva Cámara de Senadores, Fractal." data-cur="Ampliar"><img src="img/pr-fr-3.webp" alt="Vista cenital de una caja de escalera de planta poligonal, con barandas de vidrio y piso gris; arriba a la izquierda, personal de obra con chalecos naranjas." loading="lazy" style="object-position:35% 50%"></div><figcaption><span class="tech">Escalera</span>Caja de escalera con barandas de vidrio, en acabados.</figcaption></figure>
+      <figure class="oxf"><div class="oxz" data-lb="img/pr-fr-4.webp" data-t="Caja de escalera en ejecución" data-d="Nueva Cámara de Senadores, Fractal." data-cur="Ampliar"><img src="img/pr-fr-4.webp" alt="Vista cenital de una caja de escalera en ejecución, con andamios, cinta amarilla de seguridad y dos operarios con casco azul trabajando en un descanso." loading="lazy" style="object-position:50% 30%"></div><figcaption><span class="tech">Escalera</span>Caja de escalera en ejecución, con andamios y cinta de seguridad.</figcaption></figure>
+      <figure class="oxf"><div class="oxz" data-lb="img/pr-fr-5.webp" data-t="Trabajos en fachada desde andamio" data-d="Nueva Cámara de Senadores, Fractal." data-cur="Ampliar"><img src="img/pr-fr-5.webp" alt="Fachada de la edificación cubierta por andamios, con operarios trabajando en el friso superior y un paño de vidrio en el último nivel." loading="lazy" style="object-position:45% 40%"></div><figcaption><span class="tech">Fachada</span>Trabajos en la fachada desde andamio.</figcaption></figure>
+    </div>
+    <p class="small oxcr">Fotografías de obra de la Nueva Cámara de Senadores.</p>
+  </section>
+    <section class="vw" id="w-diseno" role="tabpanel" aria-label="Diseño y asistencia de diseño" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 04 de 06</span><h3>Diseño y asistencia de diseño</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Criterio de proyecto y capacidad de ayudar a otros</dd></div><div><dt class="tech">Para</dt><dd>Profesionales y estudiantes de arquitectura</dd></div><div><dt class="tech">Formatos</dt><dd>Crítica · apoyo en modelos · otros requerimientos</dd></div><div><dt class="tech">Herramientas</dt><dd>Revit · AutoCAD · SketchUp</dd></div></dl>
+    </header>
+    <p class="wl">Un servicio de profesional a profesional, o a estudiante: críticas, apoyo en tus modelos y otros requerimientos de tu proyecto.</p>
+    <div class="svc">
+      <div><span class="no">01</span><h3>Crítica de proyecto</h3><p>Reviso tu propuesta y te devuelvo observaciones claras sobre partido, proporción, recorrido y resolución.</p></div>
+      <div><span class="no">02</span><h3>Apoyo en tus modelos</h3><p>Te ayudo a ordenar, corregir o avanzar tu modelo en Revit, SketchUp o AutoCAD.</p></div>
+      <div><span class="no">03</span><h3>Otros requerimientos</h3><p>Si lo que necesitas no está en la lista, cuéntamelo y acordamos el alcance.</p></div>
+    </div>
+    <p class="wcta"><a class="btn cta" href="#contacto" data-topic="Asistencia de diseño">Consultar por asistencia</a></p>
+    <h4 class="sub2">Mi criterio de diseño</h4>
+    <div class="mind">
+      <div>
+        <p class="quote">Dibujo para entender el lugar; modelo para comprobar que se construye.</p>
+        <p class="small">Así ubico mi criterio en ocho ejes. Cada eje va de un polo al otro; el punto marca dónde me ubico.</p>
+      </div>
+      <div>
+        <div class="tens-h"><p class="tech cap">Criterio de diseño</p><button class="btn sm t" type="button" id="tensRp">Repetir</button></div>
+        <div class="tens" id="tens" role="group" aria-label="Criterio de diseño en ocho ejes"></div>
+      </div>
+    </div>
+  <h3 class="sub">Del cuaderno</h3>
+  <p class="small nbp">Láminas de mi cuaderno: toca una para verla completa.</p>
+  <div class="nb" id="nb">
+    <button class="nbc c1" type="button" data-lb="img/sk-persp.webp" data-t="Perspectiva a línea" data-d="Boceto a línea en perspectiva: un volumen largo y bajo, con vegetación al fondo." data-cur="Ampliar">
+      <span class="tape"></span>
+      <span class="pic"><img loading="lazy" src="img/sk-persp.webp" alt="Boceto a línea en perspectiva de un volumen largo y bajo con vegetación."></span>
+      <span class="cap"><b class="tech">Perspectiva a línea</b><i>Volumen largo y bajo, con vegetación</i></span>
+    </button>
+    <button class="nbc c2" type="button" data-lb="img/sk-elev.webp" data-t="Elevación estructural" data-d="Marcador sobre papel, con escala gráfica: una estructura de arcos que sostiene una cubierta continua." data-cur="Ampliar">
+      <span class="tape"></span>
+      <span class="pic"><img loading="lazy" src="img/sk-elev.webp" alt="Elevación a marcador de una estructura de arcos que sostiene una cubierta continua, con escala gráfica."></span>
+      <span class="cap"><b class="tech">Elevación estructural</b><i>Arcos y cubierta continua, con escala gráfica</i></span>
+    </button>
+    <button class="nbc c3" type="button" data-lb="img/sk-plan.webp" data-t="Planta de zonificación" data-d="Centro de alto rendimiento, patio de comidas, humedal artificial y áreas verdes, dibujados en una sola planta." data-cur="Ampliar">
+      <span class="tape"></span>
+      <span class="pic"><img loading="lazy" src="img/sk-plan.webp" alt="Planta a marcador con zonificación: centro de alto rendimiento, patio de comidas, humedal artificial y áreas verdes."></span>
+      <span class="cap"><b class="tech">Planta de zonificación</b><i>Usos, humedal y áreas verdes en una planta</i></span>
+    </button>
+  </div>
+  </section>
+    <section class="vw" id="w-concursos" role="tabpanel" aria-label="Concursos e investigación" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 05 de 06</span><h3>Concursos e investigación</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Rigor, método y mirada propia</dd></div><div><dt class="tech">Concursos</dt><dd>Alameda Central UNI · Nuevo Pabellón FAUA</dd></div><div><dt class="tech">Investigación</dt><dd>Paisaje costero de Tuquillo, Huarmey, 2008 a 2023</dd></div><div><dt class="tech">Formato</dt><dd>Informe de 42 páginas</dd></div></dl>
+    </header>
+    <div class="qtabs" role="tablist" aria-label="Concursos e investigación">
+      <button class="btn t" role="tab" type="button" data-c="inv" aria-selected="true" aria-controls="c-inv">Investigación</button>
+      <button class="btn t" role="tab" type="button" data-c="lam" aria-selected="false" aria-controls="c-lam">Láminas de concursos</button>
+    </div>
+    <div class="qp" id="c-inv" role="tabpanel">
+      <div class="inv">
+        <div class="inv-h">
+          <span class="tech">Investigación · disertación</span>
+          <h4>Variación de los indicadores visuales y su impacto en las preferencias del paisaje costero de Tuquillo, Huarmey (2008 a 2023)</h4>
+          <p class="small">Presentada al concurso de la FAUA-UNI para representar a la facultad en la Medalla del Presidente RIBA 2024, categoría Disertación. Es el mismo sitio de mi proyecto de titulación.</p>
+        </div>
+        <div class="inv-g">
+          <div><span class="tech">Pregunta</span><p>La playa de Tuquillo cambió mucho en los últimos años. ¿Cómo afectó esa alteración de los indicadores visuales a lo que los visitantes y los vecinos prefieren ver?</p></div>
+          <div><span class="tech">Método</span><p>Fotografías de la playa tomadas entre 2008 y 2023, medidas con software de análisis de imagen, y encuestas a 100 estudiantes (muestra estándar) y 20 residentes de Huarmey. Análisis con el coeficiente de correlación de Pearson.</p></div>
+          <div><span class="tech">Resultado</span><p>Los vecinos prefieren más su propio paisaje que la muestra estándar, pero ambos grupos bajaron su preferencia a lo largo de los años.</p></div>
+          <div><span class="tech">Conclusión</span><p>La preferencia del paisaje de Tuquillo disminuyó mucho entre 2008 y 2023 en todas las zonas, por los cambios en los indicadores visuales evaluados.</p></div>
+        </div>
+        <div class="corr" id="corr">
+          <div class="corr-h"><span class="tech">Correlación con la preferencia del paisaje</span><small>Muestra estándar, coeficiente de Pearson (r). «Explica» es r al cuadrado: la parte de la variación de la preferencia que acompaña a cada factor. Toca o pasa el cursor por una fila.</small></div>
+          <div class="corr-rows" id="corrRows"></div>
+          <p class="corr-d" id="corrD" aria-live="polite">Cada barra mide cuánto sube o baja la preferencia cuando cambia un indicador visual. A la izquierda, la preferencia baja; a la derecha, sube.</p>
+        </div>
+        <div class="lect">
+          <span class="tech">Lectura de conjunto</span>
+          <p>Pesa más lo que se construye y se complica que lo natural: los cuatro factores negativos explican entre 30 % y 46 % de la preferencia; el mejor factor positivo, 10 %. Coincide con la conclusión del informe: la preferencia por la playa bajó entre 2008 y 2023 al alterarse sus indicadores visuales. Son correlaciones: muestran asociación, no prueban causa.</p>
+        </div>
+        <p class="wcta"><a class="btn cta" href="#contacto" data-topic="Informe de investigación">Pedir el informe completo</a></p>
+      </div>
+    </div>
+    <div class="qp" id="c-lam" role="tabpanel" hidden>
+      <p class="wl">Dos propuestas para el campus de la UNI. Toca una lámina para ampliarla.</p>
+      <h4 class="sub2">Alameda Central UNI</h4>
+      <p class="small lmn">Propuesta para la Alameda Central, tramo FAUA, FIC y Pabellón J.</p>
+      <div class="lmg lmg2">
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-al-1.webp" data-t="Alameda Central UNI, lámina L01" data-d="Movilidad entre la ciudad y la UNI, planta del tramo FAUA, FIC y Pabellón J, lecturas del sitio y perspectiva." data-cur="Ampliar"><img src="img/co-al-1.webp" alt="Lámina L01 de la propuesta Alameda Central UNI: mapas de movilidad, vialidad y ciclovías, planta del tramo entre la FAUA, la FIC y el Pabellón J, y una perspectiva de la alameda con palmeras y árboles." loading="lazy" decoding="async"></div><figcaption><span class="tech">Lámina L01</span>Movilidad entre la ciudad y la UNI, planta del tramo, lecturas del sitio y perspectiva.</figcaption></figure>
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-al-2.webp" data-t="Alameda Central UNI, lámina L02" data-d="Atrios y zonas de la alameda, dos cortes, materialidad y tres perspectivas." data-cur="Ampliar"><img src="img/co-al-2.webp" alt="Lámina L02 de la propuesta Alameda Central UNI: axonometría con los atrios y zonas de trabajo y de exposición, dos cortes, muestras de ladrillo y concreto, y tres perspectivas peatonales." loading="lazy" decoding="async"></div><figcaption><span class="tech">Lámina L02</span>Atrios y zonas de la alameda, dos cortes, materialidad y tres perspectivas.</figcaption></figure>
+      </div>
+      <h5 class="sub3">Detalle de las láminas</h5>
+      <div class="lmg lmg1">
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-al-3.webp" data-t="Detalle de la lámina L01" data-d="Sistema de movilidad de la UNI, con la alameda, el eje vehicular y el de bicicletas, ahora y en la propuesta." data-cur="Ampliar"><img src="img/co-al-3.webp" alt="Detalle de la lámina L01: tres mapas de la ciudad y la UNI, y esquemas de la alameda, del eje vehicular y del eje de bicicletas, ahora y en la propuesta." loading="lazy" decoding="async"></div><figcaption><span class="tech">Detalle de L01</span>Movilidad, vialidad y ciclovías de la UNI; la alameda y los ejes, ahora y en la propuesta.</figcaption></figure>
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-al-4.webp" data-t="Detalle de la lámina L02" data-d="Axonometría de los atrios y las zonas de trabajo y de exposición de la alameda." data-cur="Ampliar"><img src="img/co-al-4.webp" alt="Detalle de la lámina L02: axonometría de la alameda con sus atrios, las zonas de trabajo y la zona de exposición." loading="lazy" decoding="async"></div><figcaption><span class="tech">Detalle de L02</span>Axonometría de los atrios y las zonas de trabajo y de exposición.</figcaption></figure>
+      </div>
+      <h4 class="sub2">Nuevo Pabellón FAUA</h4>
+      <p class="small lmn">«Arquitectura entre patios»: propuesta para revitalizar los pabellones H6 y H7 del campus FAUA de la UNI.</p>
+      <div class="lmg">
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-pb-1.webp" data-t="Nuevo Pabellón FAUA, lámina 1" data-d="Propuesta integral: concepción espacial, planta, secciones, evolución volumétrica y perspectiva." data-cur="Ampliar"><img src="img/co-pb-1.webp" alt="Lámina 1 de «Arquitectura entre patios»: planta y secciones en rojo, tres axonometrías de la concepción espacial, la evolución volumétrica y una perspectiva del edificio entre los pabellones del campus." loading="lazy" decoding="async"></div><figcaption><span class="tech">Lámina 1</span>Propuesta integral: concepción espacial, planta, secciones, evolución volumétrica y perspectiva.</figcaption></figure>
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-pb-2.webp" data-t="Nuevo Pabellón FAUA, lámina 2" data-d="Sección renderizada, axonometría del conjunto, sección y cuatro vistas de los patios." data-cur="Ampliar"><img src="img/co-pb-2.webp" alt="Lámina 2 de «Arquitectura entre patios»: sección renderizada con los cerros al fondo, axonometría del conjunto, sección en rojo y cuatro vistas de los patios y las fachadas." loading="lazy" decoding="async"></div><figcaption><span class="tech">Lámina 2</span>Sección renderizada, axonometría del conjunto, sección y cuatro vistas.</figcaption></figure>
+        <figure class="oxf lmf"><div class="oxz lmz" data-lb="img/co-pb-3.webp" data-t="Nuevo Pabellón FAUA, lámina 3" data-d="Detalles de fachada y paisajismo: isometría, detalles A y B, alzados, recorrido solar y selección de especies." data-cur="Ampliar"><img src="img/co-pb-3.webp" alt="Lámina 3 de «Arquitectura entre patios»: isometría de la fachada, dos detalles a escala 1/500, cuatro alzados, isometría de flujos, recorrido solar y selección de especies vegetales." loading="lazy" decoding="async"></div><figcaption><span class="tech">Lámina 3</span>Detalles de fachada y paisajismo: alzados, recorrido solar y selección de especies.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+    <section class="vw" id="w-docencia" role="tabpanel" aria-label="Docencia" hidden>
+    <header class="wh">
+      <div class="wt"><span class="tech">Ventana 06 de 06</span><h3>Docencia</h3></div>
+      <dl class="cj"><div><dt class="tech">Valida</dt><dd>Que sé transmitir lo que hago</dd></div><div><dt class="tech">Roles</dt><dd>Docente principal · asistente principal de cátedra</dd></div><div><dt class="tech">Instituciones</dt><dd>Oasis Studio · FAUA-UNI · ESAN</dd></div><div><dt class="tech">Enfoque</dt><dd>Aprender haciendo, sobre un proyecto real</dd></div></dl>
+    </header>
+    <p class="wl">Doy clases de Revit y he sido asistente principal de cátedra de Augusto Ortiz de Zevallos, en la FAUA-UNI y en ESAN. Aquí está lo que enseño y cómo lo enseño.</p>
+    <div class="acc" id="acc">
+      <div class="ac open">
+        <h4 class="ach"><button class="acb" type="button" id="acb-revit" aria-expanded="true" aria-controls="acp-revit">
+          <span class="tech">Oasis Studio</span><span class="act">Docente principal</span><span class="acc2">Curso Revit I · nivel básico a intermedio</span><i class="acx" aria-hidden="true"></i>
+        </button></h4>
+        <div class="acp" id="acp-revit" role="region" aria-labelledby="acb-revit"><div class="acp-w"><div class="acp-i">
+          <dl class="cj" style="--n:4"><div><dt class="tech">Nivel</dt><dd>Básico a intermedio</dd></div><div><dt class="tech">Modalidad</dt><dd>Virtual</dd></div><div><dt class="tech">Duración</dt><dd>21 horas en 4 semanas, 3 horas por sesión</dd></div><div><dt class="tech">Proyecto</dt><dd>Un solo proyecto: vivienda unifamiliar</dd></div></dl>
+          <h5 class="sub3">Sesión por sesión</h5>
+          <div class="board" id="board">
+            <div class="bd-rail" id="bdRail" role="tablist" aria-label="Sesiones del curso"></div>
+            <div class="bd-s" id="bdS" aria-live="polite"></div>
+          </div>
+        </div></div></div>
+      </div>
+      <div class="ac">
+        <h4 class="ach"><button class="acb" type="button" id="acb-crea" aria-expanded="false" aria-controls="acp-crea">
+          <span class="tech">FAUA-UNI</span><span class="act">Asistente principal de cátedra</span><span class="acc2">Creatividad 01</span><i class="acx" aria-hidden="true"></i>
+        </button></h4>
+        <div class="acp" id="acp-crea" role="region" aria-labelledby="acb-crea"><div class="acp-w"><div class="acp-i">
+          <dl class="cj" style="--n:4"><div><dt class="tech">Docente</dt><dd>Augusto Ortiz de Zevallos</dd></div><div><dt class="tech">Ciclos</dt><dd>2023-1 y 2023-2</dd></div><div><dt class="tech">A cargo</dt><dd>53 alumnos en cada ciclo</dd></div><div><dt class="tech">Cierre de ciclo</dt><dd>EXPO FAUA 2023-1 y 2023-2</dd></div></dl>
+          <div class="acf">
+            <div><span class="tech">Funciones</span><p>Organicé las críticas y las evaluaciones. Hice crítica y guié a los alumnos en sus primeros pasos en la arquitectura.</p></div>
+            <div><span class="tech">Resultado</span><p>El curso se consolidó como uno de los talleres más exitosos por la calidad de sus productos, a pesar de ser de primer ciclo. Se vio en la EXPO FAUA 2023-1 y 2023-2, donde tuvimos la mejor experiencia y calificación en relación con el ciclo.</p></div>
+          </div>
+          <div class="acf">
+            <div><span class="tech">Lo que aprendí</span><p>A organizar las ideas de forma directa, a trabajar el discurso y a reforzar mis habilidades blandas. En el curso se vieron distintas formas de arte, del cine a la pintura.</p></div>
+            <div><span class="tech">Lo que dejó en mi práctica</span><p>Valorar el estudio de la arquitectura y su enseñanza sin sesgos, y mantener siempre un criterio propio, sin dejar de influir en el de otros.</p></div>
+          </div>
+        </div></div></div>
+      </div>
+      <div class="ac">
+        <h4 class="ach"><button class="acb" type="button" id="acb-esan" aria-expanded="false" aria-controls="acp-esan">
+          <span class="tech">ESAN</span><span class="act">Asistente principal de cátedra</span><span class="acc2">Maestría en Gestión y Desarrollo Inmobiliario</span><i class="acx" aria-hidden="true"></i>
+        </button></h4>
+        <div class="acp" id="acp-esan" role="region" aria-labelledby="acb-esan"><div class="acp-w"><div class="acp-i">
+          <dl class="cj" style="--n:2"><div><dt class="tech">Docente</dt><dd>Augusto Ortiz de Zevallos</dd></div><div><dt class="tech">Periodo</dt><dd>2023-2, de agosto a diciembre de 2023</dd></div></dl>
+          <div class="acf">
+            <div><span class="tech">Funciones</span><p>Organicé la clase, las presentaciones y las notas del docente. Participé de forma activa en el desarrollo de las sesiones y en la lluvia de ideas del docente.</p></div>
+            <div><span class="tech">Lo que aprendí</span><p>A revisar y validar ideas de rentabilidad inmobiliaria y a llevar los proyectos adelante, con propuestas rentables que parten del análisis de la realidad peruana.</p></div>
+          </div>
+        </div></div></div>
+      </div>
+    </div>
+  </section>
+  </div>
+</section>
+
+
+<section class="pano" id="paisaje" aria-label="Render de paisaje">
+  <figure>
+    <div class="pf"><img loading="lazy" src="img/tq-panorama.webp" alt="Render al atardecer de una cubierta ligera sobre una playa, con una plataforma larga y una cadena de cerros al fondo, con el trazo a línea superpuesto."></div>
+    <figcaption><div class="wrap pfc"><span class="frase">Primero el lugar, después la forma.</span><span class="tech">Render de paisaje</span></div></figcaption>
+  </figure>
+</section>
+
+<section class="s ink" id="contacto">
+  <div class="wrap">
+  <div class="contact">
+    <div class="ch">
+      <h2>Cuéntame tu proyecto</h2>
+      <p class="clead">Completa el cajetín con el tipo de encargo, la ubicación y el plazo previsto. El mensaje se arma solo: lo abres en tu correo o lo copias.</p>
+    </div>
+    <form class="enc" id="enc" autocomplete="off" novalidate aria-label="Cajetín de encargo">
+      <div class="enc-h"><span class="tech">Cajetín de encargo</span><span class="tech">Lima, Perú</span></div>
+      <div class="enc-r">
+        <span class="lab" id="encTl">Tipo de encargo</span>
+        <div class="topics" id="topics" role="group" aria-labelledby="encTl">
+          <button class="btn sm t" type="button" data-t="Modelado y coordinación BIM" aria-pressed="false">BIM</button>
+          <button class="btn sm t" type="button" data-t="Supervisión y coordinación de obra" aria-pressed="false">Obra</button>
+          <button class="btn sm t" type="button" data-t="Presupuestos y adicionales" aria-pressed="false">Presupuestos</button>
+          <button class="btn sm t" type="button" data-t="Asistencia de diseño" aria-pressed="false">Diseño</button>
+          <button class="btn sm t" type="button" data-t="Concursos e investigación" aria-pressed="false">Concursos</button>
+          <button class="btn sm t" type="button" data-t="Docencia" aria-pressed="false">Docencia</button>
+        </div>
+      </div>
+      <div class="enc-r enc-2">
+        <div><label for="encU">Ubicación</label><input id="encU" type="text" maxlength="80" placeholder="Distrito y ciudad" autocomplete="off"></div>
+        <div><label for="encP">Plazo previsto</label><input id="encP" type="text" maxlength="80" placeholder="Inicio y duración" autocomplete="off"></div>
+      </div>
+      <div class="enc-r"><label for="encN">Tu nombre</label><input id="encN" type="text" maxlength="80" placeholder="Opcional" autocomplete="name"></div>
+      <div class="enc-r"><label for="encD">Detalle</label><textarea id="encD" rows="3" maxlength="600" placeholder="Opcional: qué necesitas, en pocas líneas"></textarea></div>
+      <div class="enc-pv" role="group" aria-label="Vista previa del mensaje">
+        <div class="enc-sb"><span class="lab">Asunto</span><b id="subjT">Consulta de proyecto</b><button class="btn sm t" type="button" id="subjB">Copiar asunto</button></div>
+        <span class="lab">Mensaje</span>
+        <pre id="encPv"></pre>
+      </div>
+      <div class="enc-a">
+        <a class="btn cta" id="encMail" href="mailto:alexantunez1604@gmail.com">Abrir en mi correo</a>
+        <button class="btn" type="button" id="encCopy">Copiar mensaje</button>
+      </div>
+      <div class="mail"><b id="mailT">alexantunez1604@gmail.com</b><button class="btn sm t" id="mailB" type="button">Copiar correo</button></div>
+      <p class="small enc-n">Si el botón no abre tu correo, copia el mensaje y pégalo en uno nuevo dirigido a esta dirección.</p>
+    </form>
+  </div>
+  <div class="foot"><span>Alexander Abel Antúnez Meza · Arquitecto y coordinador BIM</span></div>
+  </div>
+</section>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+  <div class="lb-bg" data-lbx></div>
+  <figure class="lb-f">
+    <button class="lb-x" id="lbX" type="button" aria-label="Cerrar"><i></i><i></i></button>
+    <div class="lb-im"><img id="lbImg" alt=""></div>
+    <figcaption><b id="lbT"></b><span id="lbD"></span><small class="tech" id="lbH">Toca la imagen para ver el detalle</small></figcaption>
+  </figure>
+</div>
+
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

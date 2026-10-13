@@ -1,0 +1,171 @@
+/* ======================= v2.1 · sistema plano: barra, botones, cotas, Quién soy y hojas de «Mi trabajo» =======================
+   Reglas: papel liso #E7EAEC, tinta #14181C, rojo #C8402F como único acento, esquinas rectas, líneas de 1 px,
+   rótulos «Hoja 0X / 0Y» en Barlow Condensed, cruces de registro. Sin vidrio, sin desenfoques, sin grano, sin píldoras, sin letra manuscrita. */
+
+:root{--rule:rgba(20,24,28,.16);--rule2:rgba(20,24,28,.3);--pl:#F3F5F6;--pl2:#F9FAFB}
+.progress{height:2px}
+.progress i{background:var(--mag)}
+
+/* ---------- barra superior ---------- */
+.bar{height:0;top:env(safe-area-inset-top,0px);background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+.bar::before{content:"";position:absolute;left:0;right:0;top:0;height:59px;background:var(--paper);border-bottom:1px solid var(--rule2);transition:opacity .35s}
+.bar .wrap{position:relative;height:58px;gap:20px;transition:width .45s var(--out),max-width .45s var(--out),padding .45s var(--out)}
+body.hero-top .bar::before{opacity:0}
+.mark{font-size:24px;font-weight:500}
+.mark::after{display:none}
+.bar nav{gap:0}
+.bar nav a{padding:8px 12px;font-size:13px;font-weight:500;letter-spacing:.18em;color:var(--ink2);transition:color .3s}
+.bar nav a::after{left:12px;right:12px;bottom:4px;height:1px;background:var(--mag)}
+.bar nav a:hover{color:var(--ink)}
+.bar nav a.on{color:var(--ink)}
+.bar nav a.on::after{left:12px;right:12px;bottom:4px;height:1px;background:var(--mag)}
+@media (max-width:1100px){
+  .bar nav a{padding:8px 8px;font-size:12.5px;letter-spacing:.14em}
+  .bar nav a::after,.bar nav a.on::after{left:8px;right:8px}
+}
+@media (max-width:900px){
+  .bar .wrap{gap:12px}
+  .mark{font-size:22px}
+  .bar nav a{padding:8px 6px;font-size:12px;letter-spacing:.1em}
+  .bar nav a::after,.bar nav a.on::after{left:6px;right:6px}
+}
+
+/* ---------- botones: borde de 1 px, relleno de tinta al pasar el cursor ---------- */
+.btn{padding:9px 18px;border:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font-size:13px;font-weight:600;letter-spacing:.18em}
+.btn::before{inset:-1px}
+.btn:active{transform:none}
+.btn .bt>span{transition:none}
+.btn .bt>span+span{display:none}
+.btn:hover .bt>span:first-child,.btn:focus-visible .bt>span:first-child{transform:none}
+.ink .btn{color:var(--on-ink)}
+.btn.sm{padding:6px 12px;font-size:12px}
+.btn.t{padding:7px 15px}
+.btn.cta{padding:10px 22px;background:var(--ink);color:var(--on-ink)}
+.btn.cta::before{background:var(--mag)}
+.btn.cta:hover{color:#fff;border-color:var(--mag)}
+.ink .btn.cta{background:var(--on-ink);border-color:var(--on-ink);color:var(--ink)}
+.ink .btn.cta::before{background:var(--mag)}
+.ink .btn.cta:hover{color:#fff;border-color:var(--mag)}
+.btn.ok{color:#fff;border-color:var(--mag)}
+.btn .sw{border-radius:0}
+
+/* ---------- cota: divisor con rótulo ---------- */
+.cota{border-left-width:1px;border-right-width:1px}
+.cota::before{height:1px}
+.cota span{padding:0 16px;font-size:12.5px;font-weight:600;letter-spacing:.22em;color:var(--ink2)}
+.ink .cota span{color:var(--cobl)}
+
+/* ---------- papeles y vidrios que quedan en las ventanas: planos, sin desenfoque ni fibra ---------- */
+.lb-bg{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(14,16,18,.84)}
+.lb-f{background:var(--pl2);border:1px solid var(--rule2)}
+.lb-im{background:#fff}
+.lb-x{border-radius:0;background:var(--pl2);border:1px solid var(--rule2)}
+.cur .ci{border-radius:0;background:var(--pl2);border:1px solid var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none;font-size:12.5px;letter-spacing:.2em}
+.cur .ci::before{display:none}
+.vbar{background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:1px solid var(--rule2)}
+
+/* las cruces de la plancha del Método compartían nombre con la línea de tiempo (.tl): se anula su margen y su borde */
+.pl-draw .cr{margin:0;border:0}
+
+/* ---------- Quién soy: una plancha con tres hojas ---------- */
+#quien{background:var(--paper2)}
+.qpl{position:relative;border:1px solid var(--rule2);background:var(--pl)}
+.qpl>.qx{position:absolute;z-index:3;width:15px;height:15px;pointer-events:none}
+.qx::before,.qx::after{content:"";position:absolute;background:var(--ink)}
+.qx::before{left:7px;top:0;width:1px;height:15px}
+.qx::after{left:0;top:7px;width:15px;height:1px}
+.qx.nw{left:12px;top:66px}.qx.ne{right:12px;top:66px}.qx.sw{left:12px;bottom:12px}.qx.se{right:12px;bottom:12px}
+.qbar{display:flex;align-items:stretch;justify-content:space-between;gap:12px;border-bottom:1px solid var(--rule2);background:var(--pl2)}
+.qpl .qtabs{display:flex;flex-wrap:wrap;gap:0;margin:0}
+.qpl .qtabs .btn.t{min-height:52px;padding:0 clamp(14px,2vw,26px);border:0;border-right:1px solid var(--rule2);font-size:13px;letter-spacing:.2em}
+.qpl .qtabs .btn.t[aria-selected="true"]{background:var(--ink);color:var(--on-ink)}
+.qno{align-self:center;padding-right:clamp(14px,2vw,26px);font-size:12.5px;letter-spacing:.2em;color:var(--ink2);white-space:nowrap}
+.qp{min-width:0}
+.qpl .mind{display:grid;grid-template-columns:minmax(0,1fr) clamp(300px,33%,420px);gap:0;align-items:stretch}
+.qpl .mi-l{padding:clamp(28px,4.4vw,64px);background:linear-gradient(rgba(20,24,28,.05) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(20,24,28,.05) 1px,transparent 1px) 0 0/32px 32px,var(--pl)}
+.qpl .quote{max-width:20ch;font-size:clamp(32px,3.7vw,54px);font-weight:300;line-height:1}
+.qpl .mi-l p:not(.quote){max-width:52ch;margin-top:22px;font-size:16.5px;line-height:1.65;color:var(--ink2)}
+.qpl .mi-l p.quote+p{margin-top:clamp(24px,3vw,40px)}
+.qpl .prin-col{counter-reset:val;display:flex;flex-direction:column;gap:0;margin:0;border-left:1px solid var(--rule2);background:var(--pl)}
+.qpl .prin-col>div{flex:1 1 0;display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,2.4vw,34px);border-bottom:1px solid var(--rule)}
+.qpl .prin-col>div:last-child{border-bottom:0}
+.qpl .prin-col>div::before{counter-increment:val;content:"Valor 0" counter(val);font:600 12px/1 var(--tech);letter-spacing:.2em;text-transform:uppercase;color:var(--mag)}
+.qpl .prin h3{margin:10px 0 8px;padding:0;border:0;font-style:normal;font-weight:500;font-size:clamp(28px,2.5vw,34px);line-height:1}
+.qpl .prin p{font-size:14.5px;line-height:1.55;color:var(--ink2)}
+
+/* trayectoria y formación dentro de la plancha */
+#q-tray,#q-form{padding:clamp(22px,3vw,44px)}
+#q-tray .tl{border-top:0;margin-top:0}
+.tl-head{border-bottom:1px solid var(--rule2)}
+.tl-row{border-top:1px solid var(--rule)}
+.tl-row:hover{padding-left:0;background:rgba(20,24,28,.04)}
+.tl-track{background:repeating-linear-gradient(90deg,var(--rule) 0 1px,transparent 1px 12.5%)}
+.tl-b{top:6px;bottom:6px}
+.tl-b.edu{border-width:1px}
+.tl-d{margin-top:22px;padding:clamp(20px,2.6vw,32px);border:1px solid var(--rule2);border-radius:0;background:var(--pl2);box-shadow:none}
+.tl-d h3{font-style:normal;font-weight:500;font-size:clamp(30px,3vw,40px);line-height:1}
+.tl-d li::before{height:1px}
+#q-form .fmt{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:0;padding-top:0}
+#q-form .fmt>div{padding:0 clamp(18px,2.4vw,34px)}
+#q-form .fmt>div:first-child{padding-left:0}
+#q-form .fmt>div:last-child{padding-right:0}
+#q-form .fmt>div+div{border-left:1px solid var(--rule)}
+.fh{margin:0 0 10px;font-size:12.5px;line-height:inherit;text-wrap:wrap;letter-spacing:.22em;color:var(--mag)}
+.fmt li{border-bottom:1px solid var(--rule)}
+
+/* ---------- Mi trabajo: seis hojas de índice ---------- */
+.vgrid{gap:clamp(16px,2vw,28px)}
+.vcard{border:1px solid var(--rule2);background:var(--pl);box-shadow:none;
+  transition:border-color .35s,box-shadow .35s,opacity .9s var(--out) var(--dl,0s),translate .9s var(--out) var(--dl,0s)}
+.vcard:is(:hover,:focus-visible,.act){transform:none;box-shadow:none;border-color:var(--ink)}
+.vcard[aria-current="true"]{border-color:var(--mag);box-shadow:inset 0 0 0 1px var(--mag)}
+.vcard:focus-visible{outline:2px solid var(--mag);outline-offset:3px}
+.vn{order:-1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px clamp(14px,1.8vw,22px);border-bottom:1px solid var(--rule2);
+  font-size:12px;letter-spacing:.2em;color:var(--ink2);transition:background-color .3s,color .3s}
+.vn b{font-weight:600;color:var(--mag);transition:color .3s}
+.vcard:is(:hover,:focus-visible,.act) .vn{background:var(--ink);color:var(--on-ink2)}
+.vcard:is(:hover,:focus-visible,.act) .vn b{color:var(--on-ink)}
+.vm{border-bottom:1px solid var(--rule2)}
+.vb{gap:8px;padding:18px clamp(16px,2vw,24px) 22px}
+.vcard h3{font-style:normal;font-weight:500;font-size:clamp(28px,2.7vw,40px);line-height:1.02;background-image:linear-gradient(var(--mag),var(--mag));background-size:0 1px}
+.vcard:is(:hover,:focus-visible,.act) h3{background-size:100% 1px}
+.vp{font-size:15px;line-height:1.5}
+.vgo{margin-top:8px;gap:12px;font-size:12px;letter-spacing:.2em;color:var(--ink);transition:color .3s}
+.vgo::after{width:28px;height:1px}
+.vcard:is(:hover,:focus-visible,.act) .vgo{color:var(--mag)}
+.vcard:is(:hover,:focus-visible,.act) .vgo::after{width:60px}
+.vm .vh{left:14px;bottom:10px;font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--ink2);transform:none}
+.m-dis .vh{left:auto;right:14px;bottom:10px;transform:none}
+/* miniaturas planas: sin fibra de papel ni sombras */
+.m-dis{background:var(--paper)}
+.m-con{background:var(--paper2)}
+.m-pres{background:linear-gradient(var(--rule) 1px,transparent 1px) 0 0/100% 28px,var(--paper2)}
+.m-pres .fan i{background:var(--pl2);border:1px solid rgba(20,24,28,.34);box-shadow:none}
+.m-con .drw{background:var(--pl2);border:1px solid rgba(20,24,28,.34);box-shadow:none}
+.m-obra .tube{border-width:1px;background:rgba(255,255,255,.55);box-shadow:none}
+.m-obra.ok .tube{background:rgba(200,64,47,.18)}
+.m-obra .bub{background:rgba(255,255,255,.9);border-width:1px}
+.m-obra .okk{background:var(--pl2);font-size:12px;letter-spacing:.2em}
+.m-doc{background:#1A1E22}
+.m-doc .chalk{left:14px;bottom:10px;font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--on-ink2)}
+
+/* ---------- contacto y quién soy: fondos lisos, sin fotografía ---------- */
+#contacto{background:var(--ink)}
+@media (max-width:900px){
+  .qpl .mind{grid-template-columns:1fr}
+  .qpl .prin-col{border-left:0;border-top:1px solid var(--rule2)}
+  .qpl .prin-col>div{flex:none}
+  #q-form .fmt{grid-template-columns:1fr}
+  #q-form .fmt>div{padding:22px 0 0}
+  #q-form .fmt>div:first-child{padding-top:0}
+  #q-form .fmt>div+div{border-left:0;border-top:1px solid var(--rule);margin-top:22px}
+}
+@media (max-width:620px){
+  .qx{display:none}
+  .qbar{flex-direction:column;gap:0}
+  .qpl .qtabs .btn.t{flex:1 1 auto;min-height:46px;padding:0 12px;font-size:12px;letter-spacing:.14em;border-bottom:1px solid var(--rule2)}
+  .qno{display:none}
+  .qpl .mi-l{padding:26px 20px 30px}
+  .bar .wrap{gap:12px}
+}
+@media (prefers-reduced-motion:reduce){.vcard,.vn,.vn b,.vgo{transition:none}}
