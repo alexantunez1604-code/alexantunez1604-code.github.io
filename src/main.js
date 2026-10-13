@@ -514,7 +514,7 @@ document.querySelectorAll('.btn').forEach(enhance);
   initEtapas({gsap:gsap,ScrollTrigger:ScrollTrigger,reduce:reduce});
   document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){
     var t=document.querySelector(a.getAttribute('href'));if(!t)return;
-    if(lenis){e.preventDefault();lenis.scrollTo(t,{offset:-58,duration:1.3})}
+    if(lenis){e.preventDefault();var vb=t.closest('.vw')&&document.querySelector('.vbar');lenis.scrollTo(t,{offset:-58-(vb?vb.offsetHeight:0),duration:1.3})}
   })});
   /* nav activa */
   var links={};document.querySelectorAll('.bar nav a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});

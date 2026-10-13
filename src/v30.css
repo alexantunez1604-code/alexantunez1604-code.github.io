@@ -281,7 +281,8 @@
 .bxv{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);margin-top:clamp(26px,3.4vw,44px);background:var(--ink);color:var(--on-ink);border:1px solid var(--ink);scroll-margin-top:84px}
 .bxs{position:relative;min-width:0;height:clamp(480px,76vh,680px);overflow:hidden;
   background:linear-gradient(rgba(236,240,243,.06) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgba(236,240,243,.06) 1px,transparent 1px) 0 0/32px 32px,var(--ink)}
-.bxs canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none;touch-action:none}
+.bxs canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none;touch-action:pan-y}
+.bxs.free canvas,.bxs.cuts canvas{touch-action:none}
 .bxs.cuts{box-shadow:inset 0 0 0 1px rgba(178,187,194,.5)}
 .bxload{position:absolute;inset:0;z-index:5;display:grid;place-items:center;background:var(--ink);color:var(--on-ink2);font-family:var(--tech);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:15px;transition:opacity .5s;text-align:center;padding:0 24px}
 .bxload.off{opacity:0;pointer-events:none}
@@ -465,3 +466,63 @@
 .enc .enc-n{margin:0;padding:0 16px 14px;line-height:1.45}
 @media (max-width:900px){.contact .ch{position:static}.contact .clead{margin-top:16px}}
 @media (max-width:520px){.enc-r.enc-2{grid-template-columns:1fr}.enc-2>div+div{border-left:0;border-top:1px solid var(--linei)}}
+
+/* ---------- v2.11 · ventana 01: sticker, biblioteca primero, ajustes para celular ---------- */
+.wlr{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin:clamp(20px,2.6vw,30px) 0 0}
+.wlr .wl{margin:0}
+.pgt{display:inline-flex;align-items:center;gap:11px;padding:11px 17px 11px 18px;background:var(--mag);color:#fff;text-decoration:none;font-family:var(--tech);font-weight:700;font-size:17px;line-height:1.15;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-1.6deg);box-shadow:3px 3px 0 var(--ink);transition:transform .25s,box-shadow .25s}
+.pgt svg{flex:none;animation:pgtb 1.7s ease-in-out infinite}
+a.pgt:hover,a.pgt:focus-visible{transform:rotate(0) translateY(-2px);box-shadow:5px 5px 0 var(--ink)}
+.pgt.sm{display:inline-block;margin-top:9px;padding:5px 10px;font-size:13px;letter-spacing:.09em;box-shadow:2px 2px 0 var(--ink)}
+@keyframes pgtb{0%,100%{transform:translateY(-1px)}50%{transform:translateY(3px)}}
+#w-bim .wlr .wl{max-width:44ch}
+#biblioteca{margin:clamp(14px,1.8vw,22px) 0 6px;font-size:clamp(28px,2.7vw,38px)}
+#w-bim .bxnote{margin:0 0 4px}
+#w-bim .bxnote+.bxg{margin-top:12px}
+#w-bim .bxg-h{margin-bottom:10px}
+@media (min-width:901px){
+  #w-bim .bxg-h{grid-template-columns:minmax(0,max-content) minmax(0,1fr);grid-template-areas:"k p" "h p";column-gap:clamp(20px,3vw,44px);align-items:end}
+  #w-bim .bxg-h .tech{grid-area:k}#w-bim .bxg-h h4{grid-area:h}#w-bim .bxg-h p{grid-area:p;align-self:end;max-width:88ch}
+}
+#w-bim .bxg-h h4{font-size:clamp(22px,2.1vw,28px)}
+#w-bim .bxg-h p{font-size:14px}
+.bxnote2{margin:14px 0 0}
+#visor,#biblioteca,#modalidades,#coord-bim{scroll-margin-top:calc(126px + env(safe-area-inset-top,0px))}
+#bxF{display:none}
+@media (pointer:coarse){
+  #bxF{display:inline-block}
+  .bxb{min-height:40px}.bxb.sm{min-height:36px}.bxtab{min-height:44px}
+}
+@media (max-width:620px){
+  .bxmodes .bxb{flex:1 1 22%}
+  .bxmodes:has(#bxFase:not([hidden])) .bxb{flex:1 1 30%}
+  .pgt{font-size:15px;padding:9px 13px}
+}
+/* ficha del elemento: barra compacta abajo (celular vertical y horizontal) */
+@media (max-width:620px),(max-height:520px) and (orientation:landscape){
+  .bxsel{top:auto;left:12px;right:12px;bottom:52px;width:auto;padding:7px 10px 8px;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"k a" "t a";align-items:center;gap:0 12px}
+  .bxsel .tech{grid-area:k;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12px}
+  .bxsel b{grid-area:t;display:block;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:18px;line-height:1.2;word-break:normal;-webkit-line-clamp:unset}
+  .bxsa{grid-area:a;margin:0}
+  .bxsel .bxsa .bxb.sm{min-height:34px;padding:4px 9px;font-size:12.5px}
+  .bxsel .tech{font-size:11px;letter-spacing:.08em}
+}
+/* pantallas angostas (≤400): botones de vista en una sola línea y ficha sin recortar el kicker */
+@media (max-width:400px){
+  .bxhb .bxb{white-space:nowrap;padding-left:10px;padding-right:10px;font-size:13px;letter-spacing:.06em}
+  .bxsel .tech{letter-spacing:.04em;font-size:10.5px}
+  .bxsel .bxsa .bxb.sm{padding:4px 7px;font-size:12px;letter-spacing:.06em}
+}
+@media (max-width:350px){
+  .bxhb{max-width:100%}
+  .bxhb .bxb{flex:0 1 auto;min-width:0;padding-left:7px;padding-right:7px;font-size:12px;letter-spacing:.03em}
+  .bxsel .bxsa .bxb.sm{padding:4px 6px;font-size:11.5px}
+}
+/* celular acostado: sin barra fija arriba y visor más alto */
+@media (max-height:520px) and (orientation:landscape){
+  .bar{position:relative}
+  .vbar{top:env(safe-area-inset-top,0px)}
+  .bxs{height:max(230px,calc(100vh - 78px))}
+  #visor,#biblioteca,#modalidades,#coord-bim{scroll-margin-top:calc(70px + env(safe-area-inset-top,0px))}
+}
+@media (prefers-reduced-motion:reduce){.pgt svg{animation:none}.pgt{transition:none}}

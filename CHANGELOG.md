@@ -2,6 +2,17 @@
 
 Registro de las tandas de trabajo. Las entradas más antiguas (v0.9 a v1.9) describen recursos que ya no están en el sitio (vidrio, papel arrugado, letra manuscrita, texturas); se conservan solo como historia.
 
+## v2.11 (tanda 6: biblioteca primero y visor en celular)
+- Ventana 01 (Modelado y coordinación BIM): la biblioteca de modelos pasa a ir justo después de la frase de apertura. «Biblioteca de modelos» y el primer grupo de cinco modelos quedan a la vista al abrir la ventana; «Modalidades de trabajo» y «Coordinación BIM» bajan después del visor 3D, y la nota técnica (IFC, cifras y pestaña Calidad) queda como pie del visor.
+- La frase «Aquí viven los modelos 3D que puedes recorrer» se vuelve un sello rojo con flecha que lleva a la biblioteca; aparece en la ventana y en la tarjeta de «Mi trabajo».
+- Visor 3D en celular (auditoría propia con capturas a 320, 360, 390 px y en horizontal):
+  - Deslizar con un dedo sobre el visor ahora desplaza la página (antes se quedaba atrapado). Para girar el modelo con un dedo hay un botón «Giro libre»; en modo corte el visor reserva el toque para los tiradores.
+  - Las barras fijas ya no tapan los títulos al saltar a una sección; en horizontal la barra principal deja de ser fija.
+  - La ficha del elemento seleccionado pasa a una barra compacta abajo, que no cubre el modelo.
+  - Los tiradores de la caja de corte que apuntan a la cámara o quedan encimados se ocultan.
+  - Botones táctiles más grandes y filas de modos balanceadas (3 + 2 con «Fase»); a 320 px todo cabe sin recortes.
+- Corrección de ortografía en un texto de la biblioteca («se raya»).
+
 ## v2.10 (tanda 5: limpieza y auditoría)
 - Se retiran las notas de diseño (`?notas`): la versión publicada ya no lleva comentarios ni modo de revisión, y los ganchos de depuración (`?debug`, `?snap`) solo se compilan con `VITE_DEBUG=1`.
 - Se elimina el código y los estilos sin uso (`src/glass.css`, tipografía manuscrita, rutinas de papel rasgado, texturas, grano, funciones y variables huérfanas): CSS compilado de 146 KB a 122 KB, `index.html` de 98 KB a 92 KB.

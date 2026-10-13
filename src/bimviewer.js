@@ -70,6 +70,7 @@ export function createBimViewer(opts) {
   var controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true; controls.dampingFactor = .08; controls.maxPolarAngle = Math.PI * 0.495; controls.screenSpacePanning = false;
   controls.autoRotate = !reduce; controls.autoRotateSpeed = .7;
+  canvas.style.touchAction = ''; /* lo decide el CSS: en celular un dedo desplaza la página; «Giro libre» y el corte lo reservan para el modelo */
   scene.add(new THREE.HemisphereLight(0xe1e5e8, 0x1f2428, 1.1));
   var sun = new THREE.DirectionalLight(0xffffff, 2.0); sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0004; sun.shadow.normalBias = .03;
   scene.add(sun); scene.add(sun.target);
@@ -282,6 +283,23 @@ export function createBimViewer(opts) {
       h.scale.setScalar(k); h.position.copy(u.base).addScaledVector(u.dir, k * .85);
       u.cone.position.set(0, 0, 0); u.ring.position.copy(u.dir).multiplyScalar(-.75);
     });
+    declutter();
+  }
+  /* evita asas encimadas: oculta las de un eje paralelo a la mirada (vista en planta o en corte) y, si dos caen a menos de ~7.5 % del alto del visor, la más lejana */
+  function declutter() {
+    var cw = canvas.clientWidth || 1, ch = canvas.clientHeight || 1, cam = camera.position, pts = [];
+    handles.forEach(function (h) {
+      var u = h.userData; if (!u.base) return; h.visible = true;
+      var toCam = new THREE.Vector3().subVectors(cam, u.base).normalize();
+      if (Math.abs(u.dir.dot(toCam)) > .93) { h.visible = false; return; }
+      var p = h.position.clone().project(camera);
+      pts.push({ h: h, x: (p.x * .5 + .5) * cw, y: (-p.y * .5 + .5) * ch, d: cam.distanceTo(h.position) });
+    });
+    var min = ch * .075;
+    for (var i = 0; i < pts.length; i++) for (var j = i + 1; j < pts.length; j++) {
+      var a = pts[i], b = pts[j]; if (!a.h.visible || !b.h.visible) continue;
+      if (Math.hypot(a.x - b.x, a.y - b.y) < min) (a.d > b.d ? a : b).h.visible = false;
+    }
   }
   function secState() {
     var f = {}, m = {}, sz = {};
@@ -330,7 +348,7 @@ export function createBimViewer(opts) {
   function setRay(e) { var r = canvas.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, camera); }
   function hitHandle(e) {
     if (!sec.on || !handles.length) return null; setRay(e);
-    var hs = ray.intersectObjects(handles.map(function (h) { return h.userData.hit; }), false); return hs.length ? hs[0].object.parent : null;
+    var hs = ray.intersectObjects(handles.filter(function (h) { return h.visible; }).map(function (h) { return h.userData.hit; }), false); return hs.length ? hs[0].object.parent : null;
   }
   function tint(h, c) { h.userData.cone.material.color.setHex(c); h.userData.ring.material.color.setHex(c); need = true; }
   function axisT(h) {

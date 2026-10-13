@@ -65,6 +65,7 @@ export function initBim(o) {
   }
   $('bxsGo').addEventListener('click', function () { setTab('fic'); var p = document.querySelector('.bxp'); if (p && !wide.matches) p.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); });
   $('bxsX').addEventListener('click', function () { V.select(null); });
+  var fr = $('bxF'); if (fr) fr.addEventListener('click', function () { var on = fr.getAttribute('aria-pressed') !== 'true'; fr.setAttribute('aria-pressed', on); $('bxs').classList.toggle('free', on); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !$('bxsel').hidden) V.select(null); });
 
   /* ---------- corte (section box) ---------- */
