@@ -2,6 +2,14 @@
 
 Registro de las tandas de trabajo. Las entradas más antiguas (v0.9 a v1.9) describen recursos que ya no están en el sitio (vidrio, papel arrugado, letra manuscrita, texturas); se conservan solo como historia.
 
+## v2.12 (tanda 7: claridad de textos)
+Revisión punto por punto de todos los textos del sitio (31 puntos, aprobados por Alexander el 12/10/2026), para que el mensaje sea el mismo de principio a fin.
+- Posicionamiento: el título, la descripción, los datos de compartir (og.png incluido), el encabezado y el pie pasan de «Arquitecto y coordinador BIM» a «Coordinador BIM y de obra»; la formación («bachiller en Arquitectura por la UNI, en proceso de titulación») se dice una sola vez, en «Sobre mí».
+- Frase de «Sobre mí»: «Primero que funcione.» como frase principal, con la cita de La Fontaine (*Adonis*) debajo y su fuente.
+- Trayectoria: Bienestudio termina en enero de 2026; nueva fila «SolBIM» (servicios BIM, negocio propio) con un marcador cuadrado en el presente, «en proceso, recibiendo proyectos»; «Constructora BERMEZ» y «Bermez» pasan a «BERMEZ» en todo el sitio.
+- Textos: «Valida» pasa a «Demuestra» con frases nominales; «Otros requerimientos» a «Consultas a medida»; «Explotar» a «Despiece»; hero «Módulo 3A · Pumarrinri Amazon Lodge»; Método con «patio-teatro La Huaraca» (Escuela de Teatro Puckllay), escalas «1:100» y «1:500» y el equipo como «AOZ Arquitectos, coordinado con un equipo independiente privado»; Monte Alegre con «tolerancia máxima de 1 mm en las juntas»; «+68.1 %» con espacio fino; investigación y Docencia con frases reescritas; decimal con punto en el contador de la portada («1.5»).
+- Botones del visor en celular: «Giro automático» y «Girar con un dedo» pasan a dos líneas del mismo ancho para caber a 320 px.
+
 ## v2.11 (tanda 6: biblioteca primero y visor en celular)
 - Ventana 01 (Modelado y coordinación BIM): la biblioteca de modelos pasa a ir justo después de la frase de apertura. «Biblioteca de modelos» y el primer grupo de cinco modelos quedan a la vista al abrir la ventana; «Modalidades de trabajo» y «Coordinación BIM» bajan después del visor 3D, y la nota técnica (IFC, cifras y pestaña Calidad) queda como pie del visor.
 - La frase «Aquí viven los modelos 3D que puedes recorrer» se vuelve un sello rojo con flecha que lleva a la biblioteca; aparece en la ventana y en la tarjeta de «Mi trabajo».

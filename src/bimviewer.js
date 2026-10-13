@@ -70,7 +70,7 @@ export function createBimViewer(opts) {
   var controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true; controls.dampingFactor = .08; controls.maxPolarAngle = Math.PI * 0.495; controls.screenSpacePanning = false;
   controls.autoRotate = !reduce; controls.autoRotateSpeed = .7;
-  canvas.style.touchAction = ''; /* lo decide el CSS: en celular un dedo desplaza la página; «Giro libre» y el corte lo reservan para el modelo */
+  canvas.style.touchAction = ''; /* lo decide el CSS: en celular un dedo desplaza la página; «Girar con un dedo» y el corte lo reservan para el modelo */
   scene.add(new THREE.HemisphereLight(0xe1e5e8, 0x1f2428, 1.1));
   var sun = new THREE.DirectionalLight(0xffffff, 2.0); sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0004; sun.shadow.normalBias = .03;
   scene.add(sun); scene.add(sun.target);

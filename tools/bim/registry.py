@@ -19,13 +19,13 @@ REG=[
  dict(slug='casa-violeta',g='dis',title='Casa Violeta',proj='Casa habitación en Huarmey',tags=['2022'],
   lede='Casa habitación en Huarmey, sobre un lote de 10×20 m. Proyecto y modelo de Alexander Antúnez, 2022. El entorno se recortó a 5 m alrededor de la vivienda.',credit='Proyecto y modelo: Alexander Antúnez, 2022'),
  dict(slug='casa-h',g='dis',title='Casa H',proj='Encargo particular',tags=['2024'],lede='Casa H, encargo independiente de 2024 para una persona natural. Modelo de diseño en Revit: volumetría y distribución por niveles.',credit='Proyecto y modelo: Alexander Antúnez, 2024'),
- dict(slug='casa-nilo',g='dis',title='Casa Nilo',proj='Proyecto para Bermez',tags=['2022'],lede='Casa Nilo, proyecto de 2022 desarrollado para Bermez, para un tercero. Modelo de diseño en Revit: volumetría y distribución por niveles.',credit='Proyecto y modelo: Alexander Antúnez, 2022 · para Bermez'),
- dict(slug='mastil-2',g='dis',title='Mástil 2',proj='Proyecto con Bermez y SRT',tags=['2024'],lede='Mástil 2, proyecto de 2024 desarrollado para Bermez y SRT, en asociación, para un cliente particular. Modelo de diseño en Revit: volumetría y distribución por niveles.',credit='Proyecto y modelo: Alexander Antúnez, 2024 · para Bermez y SRT, en asociación'),
+ dict(slug='casa-nilo',g='dis',title='Casa Nilo',proj='Proyecto para BERMEZ',tags=['2022'],lede='Casa Nilo, proyecto de 2022 desarrollado para BERMEZ, para un tercero. Modelo de diseño en Revit: volumetría y distribución por niveles.',credit='Proyecto y modelo: Alexander Antúnez, 2022 · para BERMEZ'),
+ dict(slug='mastil-2',g='dis',title='Mástil 2',proj='Proyecto con BERMEZ y SRT',tags=['2024'],lede='Mástil 2, proyecto de 2024 desarrollado para BERMEZ y SRT, en asociación, para un cliente particular. Modelo de diseño en Revit: volumetría y distribución por niveles.',credit='Proyecto y modelo: Alexander Antúnez, 2024 · para BERMEZ y SRT, en asociación'),
 ]
 GROUPS={
  'inf':('Modelos de información BIM','Cinco modelos con lo que necesita quien construye: cada elemento lleva su familia, tipo, nivel, fase de obra y cantidades, y se recorren por sistema, nivel y material.'),
  'mue':('Plantilla de muestra','Una plantilla estructural para ingeniería: el modelo base sobre el que un estudio empieza a trabajar en BIM.'),
- 'dis':('Modelos de diseño','Modelos para decidir forma y distribución. El detalle constructivo viene después, como en los modelos de información.')}
+ 'dis':('Modelos de diseño','Modelos para decidir forma y distribución. El detalle constructivo llega después, en los modelos de información.')}
 def head(slug):
     z=zlib.decompress(open(f'{OUT}/{slug}.bim','rb').read());jl=struct.unpack('<I',z[4:8])[0]
     return json.loads(z[16:16+jl]),os.path.getsize(f'{OUT}/{slug}.bim')

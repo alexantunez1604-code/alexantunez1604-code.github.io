@@ -1,6 +1,6 @@
 # Portafolio · Alexander Antúnez
 
-Sitio web personal de Alexander Abel Antúnez Meza, arquitecto y coordinador BIM (Lima, Perú). Página de una sola vista con seis ventanas de trabajo: Modelado y coordinación BIM (visor 3D), Supervisión y coordinación de obra, Presupuestos y adicionales, Diseño, Concursos e investigación y Docencia.
+Sitio web personal de Alexander Abel Antúnez Meza, coordinador BIM y de obra, bachiller en Arquitectura (Lima, Perú). Página de una sola vista con seis ventanas de trabajo: Modelado y coordinación BIM (visor 3D), Supervisión y coordinación de obra, Presupuestos y adicionales, Diseño y asistencia, Concursos e investigación y Docencia.
 
 Vite + GSAP + Lenis + three.js. Sin servidor: el resultado es un sitio estático.
 

@@ -115,7 +115,7 @@ export function initEtapas(o){
   }
   btns.forEach(function(b){b.addEventListener('click',function(){toStage(+b.dataset.i)})});
 
-  function fmt(el,v){var d=+(el.dataset.d||0);el.textContent=(d?v.toFixed(d):Math.round(v)+'').replace('.',',')}
+  function fmt(el,v){var d=+(el.dataset.d||0);el.textContent=(d?v.toFixed(d):Math.round(v)+'')}
   function finals(){nums.forEach(function(el){fmt(el,+el.dataset.c)})}
   function wipe(k,s){return k===0?introW:cl((s-(k-.25))/.7)}
 

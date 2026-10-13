@@ -157,12 +157,12 @@ export default {
    "slug": "casa-nilo",
    "g": "dis",
    "title": "Casa Nilo",
-   "proj": "Proyecto para Bermez",
+   "proj": "Proyecto para BERMEZ",
    "tags": [
     "2022"
    ],
-   "lede": "Casa Nilo, proyecto de 2022 desarrollado para Bermez, para un tercero. Modelo de diseño en Revit: volumetría y distribución por niveles.",
-   "credit": "Proyecto y modelo: Alexander Antúnez, 2022 · para Bermez",
+   "lede": "Casa Nilo, proyecto de 2022 desarrollado para BERMEZ, para un tercero. Modelo de diseño en Revit: volumetría y distribución por niveles.",
+   "credit": "Proyecto y modelo: Alexander Antúnez, 2022 · para BERMEZ",
    "n": 804,
    "shown": 600,
    "types": 76,
@@ -176,12 +176,12 @@ export default {
    "slug": "mastil-2",
    "g": "dis",
    "title": "Mástil 2",
-   "proj": "Proyecto con Bermez y SRT",
+   "proj": "Proyecto con BERMEZ y SRT",
    "tags": [
     "2024"
    ],
-   "lede": "Mástil 2, proyecto de 2024 desarrollado para Bermez y SRT, en asociación, para un cliente particular. Modelo de diseño en Revit: volumetría y distribución por niveles.",
-   "credit": "Proyecto y modelo: Alexander Antúnez, 2024 · para Bermez y SRT, en asociación",
+   "lede": "Mástil 2, proyecto de 2024 desarrollado para BERMEZ y SRT, en asociación, para un cliente particular. Modelo de diseño en Revit: volumetría y distribución por niveles.",
+   "credit": "Proyecto y modelo: Alexander Antúnez, 2024 · para BERMEZ y SRT, en asociación",
    "n": 841,
    "shown": 683,
    "types": 50,
@@ -203,7 +203,7 @@ export default {
   ],
   "dis": [
    "Modelos de diseño",
-   "Modelos para decidir forma y distribución. El detalle constructivo viene después, como en los modelos de información."
+   "Modelos para decidir forma y distribución. El detalle constructivo llega después, en los modelos de información."
   ]
  }
 };

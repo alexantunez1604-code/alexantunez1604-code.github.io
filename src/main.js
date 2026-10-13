@@ -49,11 +49,12 @@ var Y0=2019,Y1=2027,SP=Y1-Y0;
 var JOBS=[
  {n:'AOZ Arquitectos',r:'Asistente de proyectos',a:2019,b:2024,sub:'2019 a 2023, Lima',pts:['Modelado 3D, planimetría y expedientes arquitectónicos.','Presentaciones y documentación técnica.','Proyectos: FIL Lima 2019, Plaza Túpac Amaru (Cusco), Escuela de Teatro Puckllay, Las Gaviotas de Chorrillos.','Apoyo académico en cátedra universitaria (UNI y ESAN).']},
  {n:'SRT E.I.R.L.',r:'Asistente de proyectos',a:2022,b:2024,sub:'2022 a 2023, Lima',pts:['Modelado 3D y planimetría técnica.','Renderizado de fachadas y ambientes interiores.','Proyectos: Alpes 1, Alpes 2, Gumont, Mástil 2.']},
- {n:'BRAVEN E.I.R.L.',r:'Supervisor de calidad de acabados (QA/QC)',a:2023,b:2025,sub:'2023 a 2024, edificio multifamiliar Alpes 2, 11 pisos',pts:['Supervisión diaria de acabados arquitectónicos.','Control de puertas, ventanas, enchapes, pintura, luminarias y mueblería fija.','Registro y seguimiento de observaciones, con cuadrillas, contratistas y proveedores.','Alpes 2: 24 departamentos controlados y unas 25 actas de observaciones corregidas en dos semanas.']},
- {n:'Constructora BERMEZ',r:'Coordinador de obra',a:2024,b:2026,sub:'2024 a 2025, Las Lagunas, La Molina',pts:['Coordinación en obra de 4 viviendas de dos pisos y azotea, cada una con piscina.','Coordinación de excavaciones, concreto, albañilería, tarrajeo, piscinas e instalaciones sanitarias y eléctricas.','Seguimiento de partidas en campo, con metrados para valorizaciones y control de avance.','Coordinación con contratistas para evitar incompatibilidades constructivas.','Modelado as-built en Revit de las cuatro viviendas: arquitectura, estructuras, sanitarias y eléctricas.']},
- {n:'Bienestudio Arquitectura',r:'Coordinador de proyectos y expedientes, freelance',a:2025,b:2026.75,open:true,sub:'2025 hasta hoy, Lima',pts:['Coordinación integral de expedientes arquitectónicos orientados a construcción.','Levantamiento de incompatibilidades con especialistas y propuesta de soluciones constructivas.','Proyectos: Gocta Andes Lodge, Pumarrinri Amazon Lodge, Hotel Tucán Suites.','Formación de practicantes y reducción de retrabajos.']},
+ {n:'BRAVEN E.I.R.L.',r:'Supervisor de calidad de acabados (QA/QC)',a:2023,b:2025,sub:'2023 a 2024, edificio multifamiliar Alpes 2, 11 pisos',pts:['Supervisión diaria de acabados arquitectónicos.','Control de puertas, ventanas, enchapes, pintura, luminarias y mueblería fija.','Registro y seguimiento de observaciones, con cuadrillas, contratistas y proveedores.','Alpes 2: 24 departamentos controlados y unas 25 actas de observaciones corregidas en dos semanas de trabajo.']},
+ {n:'BERMEZ',r:'Coordinador de obra',a:2024,b:2026,sub:'2024 a 2025, Las Lagunas, La Molina',pts:['Coordinación en obra de 4 viviendas de dos pisos y azotea, cada una con piscina.','Coordinación de excavaciones, concreto, albañilería, tarrajeo, piscinas e instalaciones sanitarias y eléctricas.','Seguimiento de partidas en campo, con metrados para valorizaciones y control de avance.','Coordinación con contratistas para evitar incompatibilidades constructivas.','Modelado as-built en Revit de las cuatro viviendas: arquitectura, estructuras, sanitarias y eléctricas.']},
+ {n:'Bienestudio Arquitectura',r:'Coordinador de proyectos y expedientes, freelance',a:2025,b:2026.08,sub:'2025 a enero de 2026, Lima',pts:['Coordinación integral de expedientes arquitectónicos orientados a construcción.','Levantamiento de incompatibilidades con especialistas y propuesta de soluciones constructivas.','Proyectos: Gocta Andes Lodge, Pumarrinri Amazon Lodge, Hotel Tucán Suites.','Formación de practicantes y reducción de retrabajos.']},
  {n:'Proyectos DMD',r:'Coordinador de obra',a:2026.08,b:2026.42,sub:'febrero a mayo de 2026, Lima',pts:['Tiendas 3A (Grupo AJE, La Victoria): coordinador adjunto del residente, con 20 operarios a cargo; tienda entregada en 11 días calendario.','Monte Alegre (Surco): 23 baños y 46 ambientes enchapados en 9 departamentos, unos 2,981 m² controlados con valorización semanal.']},
- {n:'Fractal Construcciones Generales',r:'Coordinador de proyecto',a:2026.42,b:2026.67,sub:'junio a agosto de 2026, Nueva Cámara de Senadores',pts:['Operación integral de drywall, acabados e instalaciones sanitarias en obra pública institucional.','12 informes técnicos de adicionales con evidencia fotográfica georreferenciada.','Diferencia de +68.1% entre el metrado contractual y el modelado en BIM.']},
+ {n:'Fractal Construcciones Generales',r:'Coordinador de proyecto',a:2026.42,b:2026.67,sub:'junio a agosto de 2026, Nueva Cámara de Senadores',pts:['Operación integral de drywall, acabados e instalaciones sanitarias en obra pública institucional.','12 informes técnicos de adicionales con evidencia fotográfica georreferenciada.','Diferencia de +68.1 % entre el metrado contractual y el modelado en BIM.']},
+ {n:'SolBIM',r:'Servicios BIM, negocio propio',a:2026.78,b:2026.78,now:true,sub:'en proceso, recibiendo proyectos',pts:['Servicios de modelado y coordinación BIM, y contenido de Revit.']},
  {n:'Universidad Nacional de Ingeniería',r:'Bachiller en Arquitectura',a:2019,b:2024.67,edu:true,sub:'2019 a 2024, grado otorgado en agosto de 2024',pts:['Bachiller en Arquitectura por la UNI.','Titulación en proceso: proyecto arquitectónico sensible al paisaje en Tuquillo, Huarmey.']}
 ];
 (function(){
@@ -66,7 +67,7 @@ var JOBS=[
     var r=document.createElement('button');r.type='button';r.className='tl-row';r.setAttribute('aria-pressed','false');
     var nm=document.createElement('div');nm.className='nm';nm.textContent=j.n;var sm=document.createElement('small');sm.textContent=j.r;nm.appendChild(sm);
     var tr=document.createElement('div');tr.className='tl-track';var b=document.createElement('div');b.className='tl-b'+(j.edu?' edu':'')+(j.open?' open':'');
-    b.style.left=((j.a-Y0)/SP*100)+'%';b.style.width=((j.b-j.a)/SP*100)+'%';tr.appendChild(b);r.appendChild(nm);r.appendChild(tr);
+    if(j.now){b.className='tl-now';b.style.left=((j.a-Y0)/SP*100)+'%'}else{b.style.left=((j.a-Y0)/SP*100)+'%';b.style.width=((j.b-j.a)/SP*100)+'%'}tr.appendChild(b);r.appendChild(nm);r.appendChild(tr);
     r.addEventListener('click',function(){show(i)});tl.appendChild(r)});
   show(6);
 })();
@@ -116,7 +117,7 @@ document.querySelectorAll('.btn').forEach(enhance);
   function open(el){
     last=el;var src=el.dataset.lb,im=el.querySelector('img');
     box.classList.remove('z');img.src=src;img.alt=im?im.alt:(el.dataset.t||'');T.textContent=el.dataset.t||'';D.textContent=el.dataset.d||'';
-    H.textContent='Toca la imagen para ver el detalle';lb.hidden=false;document.body.classList.add('lbo');if(window.__lenis)window.__lenis.stop();
+    H.textContent='Haz clic o toca la imagen para ver el detalle';lb.hidden=false;document.body.classList.add('lbo');if(window.__lenis)window.__lenis.stop();
     $('lbX').focus({preventScroll:true});
   }
   function close(){
@@ -126,7 +127,7 @@ document.querySelectorAll('.btn').forEach(enhance);
   document.querySelectorAll('[data-lb]').forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();open(el)});
     if(!el.matches('a,button')){if(!el.hasAttribute('tabindex'))el.tabIndex=0;if(!el.hasAttribute('role'))el.setAttribute('role','button');
       el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(el)}})}});
-  box.addEventListener('click',function(){box.classList.toggle('z');H.textContent=box.classList.contains('z')?'Toca la imagen para volver a verla entera':'Toca la imagen para ver el detalle';box.scrollTop=0;box.scrollLeft=0});
+  box.addEventListener('click',function(){box.classList.toggle('z');H.textContent=box.classList.contains('z')?'Haz clic o toca la imagen para volver a verla entera':'Haz clic o toca la imagen para ver el detalle';box.scrollTop=0;box.scrollLeft=0});
   $('lbX').addEventListener('click',close);
   lb.querySelector('[data-lbx]').addEventListener('click',close);
   document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='Tab'){e.preventDefault();$('lbX').focus()}});
@@ -156,8 +157,8 @@ document.querySelectorAll('.btn').forEach(enhance);
     var viz=card.querySelector('.viz'),vd=card.querySelector('.vd');
     viz.classList.add('v-met');
     viz.innerHTML='<div class="row r1"><span class="lb2">Metrado contractual</span><div class="mbar mb1"></div></div>'+
-      '<div class="row r2"><span class="lb2">Metrado ejecutado (as-built en BIM)</span><div class="mbar mb2"><i class="base"></i><i class="diff"><b>+68.1%</b></i></div></div><i class="ref"></i>';
-    var T={r1:'Metrado contractual: es la base, 100.',base:'Metrado ejecutado, validado con el as-built modelado en BIM: 168.1 sobre esa base de 100.',diff:'Lo ejecutado superó al contrato en 68.1%. El as-built modelado sustentó la diferencia y se aprobaron los adicionales.'};
+      '<div class="row r2"><span class="lb2">Metrado ejecutado (as-built en BIM)</span><div class="mbar mb2"><i class="base"></i><i class="diff"><b>+68.1 %</b></i></div></div><i class="ref"></i>';
+    var T={r1:'Metrado contractual: es la base, 100.',base:'Metrado ejecutado, validado con el as-built modelado en BIM: 168.1 sobre esa base de 100.',diff:'Lo ejecutado superó al contrato en 68.1 %. El as-built modelado sustentó la diferencia y se aprobaron los adicionales.'};
     function hv(e){var t=e.target.closest?e.target.closest('.diff,.base,.row.r1'):null,k=!t?null:t.classList.contains('diff')?'diff':t.classList.contains('base')?'base':'r1';
       viz.classList.toggle('hd',k==='diff');viz.querySelector('.r1').classList.toggle('hv',k==='r1');viz.querySelector('.r2').classList.toggle('hv',k==='base');
       vd.textContent=k?T[k]:IDLE}
