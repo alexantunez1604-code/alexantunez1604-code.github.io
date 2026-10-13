@@ -14,8 +14,8 @@ Vite + GSAP + Lenis + three.js. Sin servidor: el resultado es un sitio estático
 - `npm run preview` sirve `dist/` para revisarlo antes de subir.
 - `npx vite build -c vite.inline.config.js && python3 tools/make_artifact.py <carpeta>` genera la variante de un solo archivo HTML que se usa para la vista previa compartida.
 
-## Publicar en GitHub Pages (solo cuando lo apruebes)
-El repositorio debe llamarse `alexantunez1604-code.github.io` (sitio de usuario) y, con el plan gratuito de GitHub, ser público. El archivo `publicar-pages.yml` es el flujo que compila y publica `dist/` al subir cambios a `main`; para activarlo hay que guardarlo en el repositorio como `.github/workflows/pages.yml` (en GitHub: *Actions → New workflow → set up a workflow yourself*, y pegar su contenido) y activar *Settings → Pages → Source: GitHub Actions*. Las etiquetas Open Graph de `index.html` (`og:url`, `og:image`, `twitter:image`) apuntan a `https://alexantunez1604-code.github.io/`: si el repositorio o el dominio cambian, hay que actualizarlas.
+## Publicación en GitHub Pages
+El sitio está publicado en https://alexantunez1604-code.github.io/ (repositorio `alexantunez1604-code/alexantunez1604-code.github.io`, público). Cada cambio que se sube a la rama `main` dispara `.github/workflows/pages.yml`, que instala dependencias con `npm ci`, compila con `npm run build` y publica `dist/` en unos 30 segundos. Las etiquetas Open Graph de `index.html` (`og:url`, `og:image`, `twitter:image`) apuntan a esa dirección: si cambia el repositorio o el dominio, hay que actualizarlas.
 
 ## Estructura
 - `index.html`  contenido y textos de la página, metadatos y datos estructurados
